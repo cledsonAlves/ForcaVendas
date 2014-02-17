@@ -1,0 +1,68 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/fundo" 
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" 
+        android:gravity="center"
+         android:layout_weight="0">
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:src="@drawable/logokelma" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="2"
+        android:gravity="center" >
+
+        <Button
+            android:id="@+id/btnTestaConexao"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/vendas"
+            android:onClick="btn_Venda"
+            android:text="@string/venda" />
+
+        <Button
+            android:id="@+id/btnSalva"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/consulta"
+            android:onClick="btn_Consulta"
+            android:text="@string/consulta" />
+
+        <Button
+            android:id="@+id/btn21d"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/visita"
+            android:onClick="btn_Visita"
+            android:text="@string/agenda" />
+
+        <Button
+            android:id="@+id/btn28d"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/mensagem"
+            android:text="@string/mensagem" />
+
+        <Button
+            android:id="@+id/btn35d"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/pedidos"
+            android:onClick="btn_Pedidos"
+            android:text="@string/pedido" />
+
+    </LinearLayout>
+
+</LinearLayout> <!-- android:attr/textAppearanceLarge" -->

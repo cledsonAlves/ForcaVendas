@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout 
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@drawable/background1"
+    android:orientation="vertical" >
+
+    <AutoCompleteTextView
+        android:id="@+id/txtFiltro"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:completionThreshold="1"
+        android:hint="Digite o que deseja Buscar"
+        android:inputType="text"
+  />
+
+    <ListView
+        android:id="@+id/listViewProdutos"
+        android:layout_width="fill_parent"
+        android:layout_height="0dip"
+        android:layout_weight="1"
+        android:cacheColorHint="@color/branco"
+        />
+ 
+</LinearLayout>

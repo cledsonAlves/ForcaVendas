@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+android:background="@color/cinza"
+  
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:id="@+id/textViewCodItem"
+            android:layout_width="59dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="13dp"
+            android:layout_weight="0.07"
+            android:text="100104"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:textColor="@color/preto" />
+
+        <TextView
+            android:id="@+id/textViewNomeItem"
+            android:layout_width="166dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_weight="0.76"
+            android:text="Xampu Ceramidas"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:textColor="@color/preto"
+            android:textSize="13dip" />
+
+        <CheckBox
+            android:id="@+id/checkBoxExcluiItem"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="btn_ligado" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal" >
+        
+        <TextView
+            android:id="@+id/textRepresentante"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dip"
+            android:text="Qtd :"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:textColor="@color/preto" />
+
+        <TextView
+            android:id="@+id/textViewQtItem"
+            android:layout_width="43dp"
+            android:layout_height="wrap_content"
+            android:text="10"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:textColor="@color/vermelho" />
+
+        <TextView
+            android:id="@+id/textViewEnd"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="R$ :"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:textColor="@color/preto" />
+
+        <TextView
+            android:id="@+id/textViewPrUni"
+            android:layout_width="76dp"
+            android:layout_height="wrap_content"
+            android:text="22,99"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:textColor="@color/vermelho" />
+
+        <TextView
+            android:id="@+id/textViewCidade"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="T.R$ :"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:textColor="@color/preto" />
+
+        <TextView
+            android:id="@+id/textViewPrTotal"
+            android:layout_width="200dip"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="150dp"
+            android:text="29,99"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:textColor="@color/vermelho" />
+
+    </LinearLayout>
+
+</LinearLayout>

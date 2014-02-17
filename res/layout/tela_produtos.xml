@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+
+ 
+    android:padding="5dip" >
+
+    <ImageView
+        android:id="@+id/imageState"
+        android:layout_width="90dp"
+        android:layout_height="62dp"
+        android:src="@drawable/nil" />
+
+    <TextView
+        android:id="@+id/textState"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/imageState"
+        android:layout_toRightOf="@+id/imageState"
+        android:paddingLeft="5dp"
+        android:text="XAMPU CERAMIDAS "
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:textColor="@color/preto"
+        android:textSize="18sp" />
+
+    <TextView
+        android:id="@+id/textArea"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/textState"
+        android:text="10,75"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:textColor="@color/vermelho" />
+
+    <TextView
+        android:id="@+id/textViewQtItem"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/textState"
+        android:layout_below="@+id/textState"
+        android:text="Cód :"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:textColor="@color/preto" />
+
+    <TextView
+        android:id="@+id/textCodProd"
+        android:layout_width="80dp"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/textViewQtItem"
+        android:layout_below="@+id/textState"
+        android:layout_toRightOf="@+id/textViewQtItem"
+        android:text="1225"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:textColor="@color/vermelho" />
+
+    <TextView
+        android:id="@+id/textRepresentante"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/textArea"
+        android:layout_alignBottom="@+id/textArea"
+        android:layout_toLeftOf="@+id/textArea"
+        android:text="R$"
+        android:textColor="@color/preto" />
+
+</RelativeLayout>

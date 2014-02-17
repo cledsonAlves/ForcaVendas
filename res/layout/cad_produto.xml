@@ -1,0 +1,316 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/scroller"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:fillViewport="true" 
+     android:background="@color/cinza">
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" >
+
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:paddingLeft="6dip"
+            android:paddingRight="6dip"
+            android:paddingTop="6dip"
+            android:text="Cadastro de Produto"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textColor="@color/preto" />
+
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="1dip"
+            android:layout_marginBottom="12dip"
+            android:layout_marginLeft="6dip"
+            android:layout_marginRight="6dip"
+            android:layout_marginTop="6dip"
+            android:background="#ff106510" />
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/carrinho" />
+
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1.0"
+            android:paddingBottom="6dip"
+            android:paddingLeft="6dip"
+            android:paddingRight="6dip" />
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="16dp"
+            android:background="@android:drawable/bottom_bar"
+            android:gravity="center_vertical" >
+
+               <TextView
+                   android:id="@+id/textRepresentante"
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:layout_weight="0.00"
+                   android:text="*"
+                   android:textAppearance="?android:attr/textAppearanceSmall"
+                   android:textColor="@color/vermelho" />
+
+            <TextView
+                android:id="@+id/textViewQtItem"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/codigo"
+                android:textColor="@color/preto" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="@android:drawable/bottom_bar"
+            android:gravity="center_vertical" >
+
+            <EditText
+                android:id="@+id/editCodRep"
+                android:layout_width="148dip"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:inputType="number" >
+            </EditText>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="16dp"
+            android:background="@android:drawable/bottom_bar"
+            android:gravity="center_vertical" >
+
+            <TextView
+                android:id="@+id/textRepresentante"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.01"
+                android:text="*"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:textColor="@color/vermelho" />
+
+            <TextView
+                android:id="@+id/textViewQtItem"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.31"
+                android:text="@string/descricao"
+                android:textColor="@color/preto" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="@android:drawable/bottom_bar"
+            android:gravity="center_vertical" >
+
+            <EditText
+                android:id="@+id/editNomeRep"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1.0"
+                android:ems="10" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="16dp"
+            android:background="@android:drawable/bottom_bar"
+            android:gravity="center_vertical" >
+
+            <TextView
+                android:id="@+id/textViewQtItem"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.51"
+                android:text="@string/peso"
+                android:textColor="@color/preto" />
+
+            <TextView
+                android:id="@+id/textViewQtItem"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.30"
+                android:text="@string/categoria"
+                android:textColor="@color/preto" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="@android:drawable/bottom_bar"
+            android:gravity="center_vertical" >
+
+            <EditText
+                android:id="@+id/editPeso"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:ems="10"
+                android:inputType="textPersonName" >
+
+                <requestFocus />
+            </EditText>
+
+            <EditText
+                android:id="@+id/editSenha"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:ems="10" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="16dp"
+            android:background="@android:drawable/bottom_bar"
+            android:gravity="center_vertical" >
+
+            <TextView
+                android:id="@+id/textView12"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.31"
+                android:text="@string/departamento"
+                android:textColor="@color/preto" />
+
+            <TextView
+                android:id="@+id/textView11"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.30"
+                android:text="@string/embalagem"
+                android:textColor="@color/preto" />
+
+            <TextView
+                android:id="@+id/textViewDataCompra"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.30"
+                android:text="Estoque"
+                android:textColor="@color/preto" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="@android:drawable/bottom_bar"
+            android:gravity="center_vertical" >
+
+            <EditText
+                android:id="@+id/editDepartamento"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1.0"
+                android:ems="10"
+                android:inputType="textPersonName" />
+
+            <Spinner
+                android:id="@+id/spEmbalagem"
+                android:layout_width="0dp"
+                android:layout_height="50dip"
+                android:layout_weight="1.0" />
+
+            <EditText
+                android:id="@+id/editEstoque"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1.0"
+                android:ems="10"
+                android:inputType="textPersonName" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="16dp"
+            android:background="@android:drawable/bottom_bar"
+            android:gravity="center_vertical" >
+               <TextView
+                android:id="@+id/textRepresentante"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.01"
+                android:text="*"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:textColor="@color/vermelho" />
+
+            <TextView
+                android:id="@+id/textViewQtItem"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.33"
+                android:text="@string/preco"
+                android:textColor="@color/preto" />
+
+            <TextView
+                android:id="@+id/textViewQtItem"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.30"
+                android:text="@string/fornecedor"
+                android:textColor="@color/preto" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="@android:drawable/bottom_bar"
+            android:gravity="center_vertical" >
+
+            <EditText
+                android:id="@+id/editPreco"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1.0"
+                android:ems="10"
+                android:inputType="phone|textPersonName" />
+
+            <Spinner
+                android:id="@+id/spFornecedor"
+                android:layout_width="0dp"
+                android:layout_height="50dip"
+                android:layout_weight="1.0" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="@android:drawable/bottom_bar"
+            android:gravity="center_vertical|right" >
+
+            <ImageButton
+                android:id="@+id/imageButtonVolta"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="30dp"
+                android:onClick="btn_voltar"
+                android:src="@drawable/inicio64" />
+
+            <ImageButton
+                android:id="@+id/imageButtonScaner"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="30dp"
+                android:onClick="btn_Scanner"
+                android:src="@drawable/barcode64" />
+
+            <ImageButton
+                android:id="@+id/imageButtonSalvar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="btn_Cadastra"
+                android:src="@drawable/salvar64" />
+
+        </LinearLayout>
+    </LinearLayout>
+
+</ScrollView>

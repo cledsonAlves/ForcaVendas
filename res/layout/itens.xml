@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/scroller"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:fillViewport="true" 
+    android:background="@color/cinza">
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="16dp"
+            android:background="@android:drawable/bottom_bar"
+            android:gravity="center" >
+
+            <TextView
+                android:id="@+id/textViewQtItem"
+                android:layout_width="wrap_content"
+                android:layout_height="36dp"
+                android:layout_weight="0.31"
+                android:gravity="center"
+                android:text="Quantidade digitada"
+                android:textColor="@color/preto" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="@android:drawable/bottom_bar"
+            android:gravity="center_vertical" >
+
+            <ImageButton
+                android:id="@+id/imageButtonRem"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:src="@drawable/retira64" />
+
+            <EditText
+                android:id="@+id/editTextQtdIt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:ems="10"
+                android:inputType="number" 
+                android:gravity="center">
+
+                <requestFocus />
+            </EditText>
+
+            <ImageButton
+                android:id="@+id/imageButtonAdd"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:src="@drawable/adiciona64" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="@android:drawable/bottom_bar"
+            android:gravity="center|center_vertical" >
+
+            <Button
+                android:id="@+id/buttonVolta"
+                android:layout_width="140dip"
+                android:layout_height="wrap_content"
+                android:text="Voltar" />
+
+            <Button
+                android:id="@+id/buttonAtera"
+                android:layout_width="140dip"
+                android:layout_height="wrap_content"
+                android:text="Alterar" />
+
+        </LinearLayout>
+    </LinearLayout>
+
+</ScrollView>

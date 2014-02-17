@@ -1,0 +1,238 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background1" >
+
+    <LinearLayout
+        android:id="@+id/linearLayout2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="27dp" >
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayout3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/linearLayout2"
+        android:layout_marginLeft="39dp"
+        android:layout_marginTop="61dp"
+        android:layout_toRightOf="@+id/linearLayout2" >
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayout4"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true" >
+
+        <TextView
+            android:id="@+id/textViewQtItem"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Item :"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:textColor="@color/preto" />
+
+        <EditText
+            android:id="@+id/editTextNomeProd"
+            android:layout_width="520dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="65dp"
+            android:layout_weight="0.02"
+            android:inputType="textPersonName" />
+
+        <ImageButton
+            android:id="@+id/imageButton6"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.00"
+            android:onClick="btn_buscaProdutoCodigo"
+            android:src="@drawable/barcode64" />
+
+        <ImageButton
+            android:id="@+id/imageButtonAdd"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="btn_buscaProduto"
+            android:src="@drawable/pesquisa64" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayout1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/linearLayout4" >
+
+        <TextView
+            android:id="@+id/textRepresentante"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Qtd :  "
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:textColor="@color/preto" />
+
+        <ImageButton
+            android:id="@+id/imageButtonMenos"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="btn_menos"
+            android:src="@drawable/voltar32" />
+
+        <EditText
+            android:id="@+id/editTextQtd"
+            android:layout_width="61dp"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="0,00"
+            android:inputType="number" />
+
+        <ImageButton
+            android:id="@+id/imageButtonMais"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="btn_mais"
+            android:src="@drawable/volta" />
+
+        <TextView
+            android:id="@+id/txtViewTabela"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="21dp"
+            android:text="Preço :"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:textColor="@color/preto" />
+
+        <EditText
+            android:id="@+id/editTextPreco"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="29dp"
+            android:layout_marginRight="10dp"
+            android:layout_weight="0.21"
+            android:ems="10"
+            android:inputType="numberDecimal" />
+
+        <TextView
+            android:id="@+id/textViewQtde"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Desc. : %"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:textColor="@color/preto" />
+
+        <EditText
+            android:id="@+id/editTextDescIten"
+            android:layout_width="84dp"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="20dp"
+            android:ems="10"
+            android:hint="0.0"
+            android:inputType="number" >
+
+            <requestFocus />
+        </EditText>
+
+        <ImageButton
+            android:id="@+id/imageButtonRem"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="50dp"
+            android:onClick="btn_AdicionaItem"
+            android:src="@drawable/adiciona64" />
+
+        <ImageButton
+            android:id="@+id/imageButton3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="btn_excluiItem"
+            android:src="@drawable/retira64" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayout5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="27dp" >
+    </LinearLayout>
+
+    <ImageButton
+        android:id="@+id/imageButton4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:onClick="btn_confirmaVenda"
+        android:src="@drawable/salvar64" />
+
+    <ImageButton
+        android:id="@+id/imageButton5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:src="@drawable/exclui64" 
+        android:onClick="btn_cancela"/>
+
+    <ListView
+        android:id="@+id/listViewItens"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/imageButton4"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/linearLayout1"
+        android:cacheColorHint="@color/branco" >
+
+    </ListView>
+
+    <EditText
+        android:id="@+id/editTextTotalPedido"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_toLeftOf="@+id/imageButton4"
+        android:ems="10"
+        android:hint="0,00"
+        android:inputType="numberDecimal" />
+
+    <TextView
+        android:id="@+id/textViewEnd"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/editTextTotalPedido"
+        android:layout_alignBottom="@+id/editTextTotalPedido"
+        android:layout_marginRight="26dp"
+        android:layout_toLeftOf="@+id/editTextTotalPedido"
+        android:text="@string/total"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:textColor="@color/preto" />
+
+    <EditText
+        android:id="@+id/editCpfRep"
+        android:layout_width="120dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginRight="26dp"
+        android:layout_toLeftOf="@+id/textViewValor"
+        android:ems="10"
+        android:inputType="number" />
+
+    <TextView
+        android:id="@+id/textViewCidade"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/editCpfRep"
+        android:layout_alignBottom="@+id/editCpfRep"
+        android:layout_marginRight="21dp"
+        android:layout_toLeftOf="@+id/editCpfRep"
+        android:text="@string/totalItens"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:textColor="@color/preto" />
+
+</RelativeLayout>

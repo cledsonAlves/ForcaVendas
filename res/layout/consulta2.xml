@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/cinzabrilhante"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" 
+         android:background="@color/preto" >
+
+        <TextView
+            android:id="@+id/textView1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:textSize="12dip" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="49dp"
+        android:gravity="center_vertical"
+          android:background="@color/preto" >
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:src="@drawable/procura" />
+
+        <EditText
+            android:id="@+id/etProcurar"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:ems="10"
+            android:hint="Procurar"
+            android:inputType="textFilter" />
+
+    </LinearLayout>
+
+    <ListView
+        android:id="@+id/lvEstados"
+        android:layout_width="fill_parent"
+        android:layout_height="200dip"
+        android:layout_weight="0.59"
+        android:cacheColorHint="@color/cinzabrilhante"
+        android:clickable="true"
+        android:smoothScrollbar="true" >
+    </ListView>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="49dp"
+        android:gravity="center_vertical"
+        android:background="@color/preto" >
+
+        <TextView
+            android:id="@+id/textView4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dip"
+            android:text="Qtd. Itens :  "
+            android:textColor="@color/branco" />
+
+        <TextView
+            android:id="@+id/textViewQtde"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1.58"
+            android:text="25"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:textColor="@color/vermelho"
+            android:textSize="28dip" />
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.11"
+            android:text="Total Pedido : R$  "
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:textColor="@color/branco" />
+
+        <TextView
+            android:id="@+id/textViewVlTotal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="9125,50"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:textColor="@color/vermelho"
+            android:textSize="28dip" />
+
+    </LinearLayout>
+
+</LinearLayout>

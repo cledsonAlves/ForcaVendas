@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- Strings da Aplicação, uma forma de poder internacionalizar o apk para diversas linguas -->
+    <string name="app_name">Força de Vendas</string>
+
+    <!-- Menu -->
+    <string name="venda">Vendas</string>
+    <string name="consulta">Consultas</string>
+    <string name="agenda">Visitas</string>
+    <string name="mensagem">Mensagens</string>
+    <string name="pedido">Pedidos</string>
+    <string name="representante">Representante : </string>
+
+    <!-- Tela Pedidos 1 -->
+    <string name="novo"> Novo</string>
+    <string name="altera"> Altera</string>
+    <string name="salva"> Salvar</string>
+    <string name="exclui">Excluir</string>
+    <string name="cancela">Cancelar</string>
+    <string name="nomeCliente">Cliente</string>
+    <string name="numeroPedido"> N° Pedido</string>
+    <string name="operacao"> Operação</string>
+    <string name="entrega">Data Venda</string>
+    <string name="tipoPagamento">Pagamento</string>
+    <string name="planoPagamento">Plano</string>
+    <string name="filial">Filial</string>
+    <string name="prazoMedio">Prazo Médio</string>
+    <string name="observacao">Observações</string>
+
+    <!-- Tela Pedidos 2 -->
+    <string name="item">Item</string>
+    <string name="quantidade">Qtde</string>
+    <string name="preco">Preço</string>
+    <string name="total">Total :</string>
+    <string name="desconto">Total desc. : %</string>
+    <string name="totalItens">Total Itens :</string>
+
+    <!-- Cadastra Produtos -->
+    <string name="codigo">Código</string>
+    <string name="descricao">Descrição</string>
+    <string name="embalagem">Embalagem</string>
+    <string name="peso">Peso</string>
+    <string name="categoria">Categoria / Seção</string>
+    <string name="departamento">Departamento</string>
+    <string name="fornecedor">Fornecedor</string>
+
+    <!-- Cadastra Clientes -->
+    <string name="nomeCli">Nome</string>
+    <string name="cnpj_cpf">CNPJ/CPF</string>
+    <string name="endereco">Endereço</string>
+    <string name="bairro">Bairro</string>
+    <string name="cidade">Cidade</string>
+    <string name="estado">Estado</string>
+    <string name="uf">UF</string>
+    <string name="telComercial">Tel.Comercial</string>
+    <string name="celular_radio">Celular / Radio</string>
+    <string name="email">E-Mail</string>
+    
+    
+        <!-- Cadastra Representante -->
+    <string name="nomeRep">Nome</string>
+    <string name="textoRep">Cadastro de Representante</string>
+    <string name="usuarioRep">Usuário</string>
+    <string name="senhaRep">Senha</string>
+
+    <!-- Tela tabela de preço -->
+    <string name="tabela14">Tabela 14 dias</string>
+    <string name="tabela21">Tabela 21 dias</string>
+    <string name="tabela28">Tabela 28 dias</string>
+    <string name="tabela35">Tabela 35 dias</string>
+    <string name="tabela42">Tabela 42 dias</string>
+
+    <!-- dialogo Trasmite -->
+    <string name="volumes">Volumes :</string>
+    <string name="vlLiquido">Valor Liquido :</string>
+
+    <!-- Tela   lista_pedido -->
+    <string name="tpeso">Total peso :</string>
+    <string name="tvolumes">Total Volumes :</string>
+    <string name="titens">Total de Itens :</string>
+    <string name="tliquido">Total Líquido R$ :</string>
+    <string name="data">Data Venda</string>
+    <string name="plano">Plano</string>
+  
+
+</resources>

@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/background1"
+     >
+
+    <TextView
+        android:id="@+id/textViewQtItem"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Tabela 14 dias"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:textColor="@color/rosa" />
+
+    <EditText
+        android:id="@+id/editCodRep"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="number"
+        android:singleLine="true" >
+
+        <requestFocus />
+    </EditText>
+
+    <TextView
+        android:id="@+id/textRepresentante"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Tabela 21 dias"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:textColor="@color/rosa" />
+
+    <EditText
+        android:id="@+id/editCpfRep"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="number" />
+
+    <TextView
+        android:id="@+id/txtViewTabela"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Tabela 28 dias"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:textColor="@color/rosa" />
+
+    <EditText
+        android:id="@+id/editTextTab28"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="number" />
+
+    <TextView
+        android:id="@+id/textViewEnd"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Tabela 35 dias"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:textColor="@color/rosa" />
+
+    <EditText
+        android:id="@+id/editEstoque"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="number" />
+
+    <TextView
+        android:id="@+id/textViewQtde"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Tabela 42 dias"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:textColor="@color/rosa" />
+
+    <EditText
+        android:id="@+id/editTel2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="number" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+        <ImageButton
+            android:id="@+id/imageButtonAdd"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="200dp"
+            android:src="@drawable/salvar64" />
+
+        <TextView
+            android:id="@+id/textViewCidade"
+            android:layout_width="416dp"
+            android:layout_height="match_parent"
+            android:text="preço final = preço base + tabela"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:textColor="@color/azul" />
+
+    </LinearLayout>
+
+</LinearLayout>

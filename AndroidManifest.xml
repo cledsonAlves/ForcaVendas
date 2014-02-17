@@ -1,0 +1,277 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.br.kelma"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-sdk android:minSdkVersion="8" />
+    
+
+    <uses-permission android:name="android.permission.WRITE_OWNER_DATA" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_OWNER_DATA" />
+    
+    <uses-permission android:name="android.permission.READ_CALENDAR" />
+    <uses-permission android:name="android.permission.WRITE_CALENDAR" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.INTERNET" />
+ 
+
+
+    <!-- Suporte para Multiplas Telas -->
+    <supports-screens android:resizeable="false" />
+    <supports-screens android:smallScreens="true" />
+    <supports-screens android:normalScreens="true" />
+    <supports-screens android:largeScreens="true" />
+    <supports-screens android:anyDensity="true" />
+
+    <application
+        android:icon="@drawable/vendedor128"
+        android:label="@string/app_name" 
+        >
+
+        <activity
+            android:name="com.br.gui.Splash"
+             
+            android:label="Força de Vendas"
+           >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".Menu"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.MENU" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.br.gui.Autentica"
+            android:label="Autentica" >
+        </activity>
+        <activity
+            android:name="com.br.baseDados.criaBanco"
+            android:label="Tela Banco Dados"
+            android:screenOrientation="landscape" >
+        </activity>
+        <activity
+            android:name="com.br.baseDados.ExecutaScript"
+            android:label="Criando o Banco, Aguarde!!!"
+            android:screenOrientation="landscape" >
+        </activity>
+        <activity
+            android:name="com.br.baseDados.criaTabelas"
+            android:label="Tela Banco Dados"
+            android:screenOrientation="landscape" >
+        </activity>
+        <activity
+            android:name="com.br.baseDados.Banco"
+            android:label="Tela Cadastro"
+            android:screenOrientation="landscape" >
+        </activity>
+        <activity
+            android:name="com.br.gui.TelaCadastraCategoriaProduto"
+            android:label="Cadastro de categoria do Produto"
+            android:screenOrientation="landscape" >
+        </activity>
+        <activity
+            android:name="com.br.gui.TelaCadastraProduto"
+            android:label="Cadastro de  Produtos" >
+        </activity>
+        <activity
+            android:name="com.br.gui.TelaPedidos"
+            android:label="Pedidos"
+            android:screenOrientation="landscape" >
+        </activity>
+        <activity
+            android:name="com.br.gui.ConsultaProdutos"
+            android:label="Pedidos" >
+        </activity>
+        <activity
+            android:name="com.br.gui.PaginaListView"
+            android:label="Pedidos" >
+        </activity>
+        <activity
+            android:name="com.br.gui.TelaCadastroCliente"
+            android:label="Cadastro de clientes" >
+        </activity>
+        <activity
+            android:name="com.br.gui.TelaAgendaVisita"
+            android:label="Agendar visita"
+            android:screenOrientation="landscape" >
+        </activity>
+        <activity
+            android:name="com.br.gui.TelaRelatorios"
+            android:label="Relatório de Vendas" >
+        </activity>
+        <activity
+            android:name="com.br.gui.TelaClientesProdutos"
+            android:label="Clientes / Produtos" >
+        </activity>
+        <activity
+            android:name="com.br.gui.TelaClientes"
+            android:label="Clientes" >
+        </activity>
+          <activity
+            android:name="com.br.gui.TelaClientes2"
+            android:label="Clientes" >
+        </activity>
+        <activity
+            android:name="com.br.gui.TelaProdutos"
+            android:configChanges="keyboardHidden"
+            android:label="Produtos" >
+        </activity>
+        <activity
+            android:name="com.br.gui.TelaCadastraRepresentante"
+            android:label="Cadastro de Representantes" >
+        </activity>
+        <activity
+            android:name="com.br.gui.TelaVenda"
+            android:label="Iniciar Venda" >
+        </activity>
+        <activity
+            android:name="com.br.gui.TelaListaPedido"
+            android:label="Pedidos"
+               >
+        </activity>
+        <activity
+            android:name="com.br.gui.TelaOrcamento"
+            android:label="Pedidos"
+             >
+        </activity>
+        <activity
+            android:name="com.br.gui.TelaGrafico"
+            android:label="Relatórios"
+             >
+        </activity>
+        <activity
+            android:name="com.br.gui.TelaVenda2"
+            android:label="Iniciar Venda" 
+            android:configChanges="orientation|keyboard|keyboardHidden">
+        </activity>
+         <activity
+            android:name="com.br.gui.TelaListaPedidoTrasmitido"
+            android:label="Pedidos Transmitidos" 
+            android:configChanges="orientation|keyboard|keyboardHidden">
+        </activity>
+          <activity
+            android:name="com.br.gui.TelaArquivados"
+            android:label="Arquivados" 
+            android:configChanges="orientation|keyboard|keyboardHidden">
+        </activity>
+          <activity
+            android:name="com.br.gui.TelaProdutos2"
+            android:label="Produtos" 
+            android:configChanges="keyboardHidden">
+        </activity>
+       
+        <activity
+            android:name="com.br.gui.TelaFoto"
+            android:label="Pressione o menu voltar do aparelho, para retornar a tela de produtos." >
+        </activity>
+        <activity
+            android:name="com.br.gui.TelaParametrosPedido"
+            android:label="Parametros" >
+        </activity>
+        <activity
+            android:name="com.br.gui.TelaAtualizaEstoque"
+            android:label="Atualiza Estoque"
+            >
+        </activity>
+         <activity
+            android:name="com.br.gui.TelaConfigura"
+            android:label="Configuração"
+            >
+        </activity>
+        <activity
+            android:name="com.br.gui.Main"
+            android:label="Iniciar Venda" >
+        </activity>
+        <activity
+            android:name="com.br.gui.TelaCadastraFornecedor"
+            android:label="Cadastra Fornecedor" >
+        </activity>
+        <activity
+            android:name="com.br.gui.TelaTabelaPreco"
+            android:label="Tabela de Preço"
+            >
+        </activity>
+        <activity
+            android:name="com.br.gui.TelaEstados"
+            android:label="Pedidos Aguardando trasmissão ..." >
+        </activity>
+           <activity
+            android:name="com.br.gui.TelaDigitacao"
+            android:label="Tela Digitacao ..." 
+            android:configChanges="orientation|keyboard|keyboardHidden">
+        </activity>
+        <activity
+            android:name="com.br.manipulaBanco.BuscaCliente"
+            android:label="Clientes " >
+        </activity>
+        <activity
+            android:name="com.br.manipulaBanco.BuscaProduto"
+            android:label="Tela de Produtos"
+            >
+        </activity>
+        <activity
+            android:name="com.br.gui.Adaptador"
+            android:label="Tela Adaptador"
+             android:screenOrientation="landscape" 
+           >
+        </activity>
+        <activity
+            android:name="com.br.gui.TelaPedido"
+            android:label="Pedidos"
+           >
+        </activity>
+       
+        
+        <activity
+            android:name="com.br.gui.TelaVendedores"
+            android:label="Representantes" >
+        </activity>
+          <activity
+            android:name="com.br.gui.TelaCabecalho"
+            android:configChanges="keyboardHidden"
+            android:label="Cabeçalho" >
+        </activity>
+        
+          
+        <activity
+            android:name="com.br.logica.Consulta"
+            android:label="Representantes" >
+        </activity>
+           
+        <activity
+            android:name="com.br.logica.Produtos1"
+            android:configChanges="keyboardHidden"
+            android:label="Representantes" >
+        </activity>
+           
+        <activity
+            android:name="com.br.logica.Produtos2"
+            android:configChanges="keyboardHidden"
+            android:label="Representantes" >
+        </activity>
+           
+        <activity
+            android:name="com.br.logica.Produtos3"
+            android:configChanges="keyboardHidden"
+            android:label="Representantes" >
+        </activity>
+           
+        <activity
+            android:name="com.br.logica.Produtos4"
+            android:configChanges="keyboardHidden"
+            android:label="Representantes" >
+        </activity>
+        
+    </application>
+
+</manifest>

@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" 
+    android:background="@color/cinzabrilhante">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" >
+
+        <TextView
+            android:id="@+id/textView1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:textSize="12dip" />
+
+    </LinearLayout>
+
+       <LinearLayout
+           android:layout_width="fill_parent"
+           android:layout_height="49dp"
+           android:gravity="center_vertical" >
+
+           <ImageView
+               android:id="@+id/imageView"
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:layout_weight="1"
+               android:src="@drawable/procura" />
+
+           <EditText
+               android:id="@+id/etProcurar"
+               android:layout_width="fill_parent"
+               android:layout_height="wrap_content"
+               android:layout_weight="1"
+               android:ems="10"
+               android:hint="Procurar"
+               android:inputType="textFilter" />
+
+        </LinearLayout>
+        
+             <LinearLayout
+           android:layout_width="fill_parent"
+           android:layout_height="49dp"
+           android:gravity="center_vertical" >
+
+                 <Button
+                     android:id="@+id/btnVista"
+                     style="?android:attr/buttonStyleSmall"
+                     android:layout_width="wrap_content"
+                     android:layout_height="wrap_content"
+                     android:layout_weight="1"
+                     android:text="A vista" 
+                     android:onClick="btn_vista"/>
+
+                 <Button
+                     android:id="@+id/btn14d"
+                     style="?android:attr/buttonStyleSmall"
+                     android:layout_width="wrap_content"
+                     android:layout_height="wrap_content"
+                     android:layout_weight="1"
+                     android:text="14 dias" 
+                     android:onClick="btn_14d"/>
+
+                 <Button
+                     android:id="@+id/btn21d"
+                     style="?android:attr/buttonStyleSmall"
+                     android:layout_width="wrap_content"
+                     android:layout_height="wrap_content"
+                     android:layout_weight="1"
+                     android:text="21 dias" 
+                     android:onClick="btn_21d"/>
+
+                 <Button
+                     android:id="@+id/btn28d"
+                     style="?android:attr/buttonStyleSmall"
+                     android:layout_width="wrap_content"
+                     android:layout_height="wrap_content"
+                     android:layout_weight="1"
+                     android:text=" 28 dias"
+                     android:onClick="btn_28d" />
+
+                 <Button
+                     android:id="@+id/btn35d"
+                     style="?android:attr/buttonStyleSmall"
+                     android:layout_width="wrap_content"
+                     android:layout_height="wrap_content"
+                     android:layout_weight="1"
+                     android:text="35 dias" 
+                     android:onClick="btn_35d" />
+
+                 <Button
+                     android:id="@+id/btn42d"
+                     style="?android:attr/buttonStyleSmall"
+                     android:layout_width="wrap_content"
+                     android:layout_height="wrap_content"
+                     android:layout_weight="1"
+                     android:text=" 42 dias" 
+                     android:onClick="btn_42d"/>
+
+        </LinearLayout>
+
+    <ListView
+        android:id="@+id/lvEstados"
+        android:layout_width="fill_parent"
+        android:layout_height="match_parent"
+        android:cacheColorHint="@color/cinzabrilhante"
+        android:clickable="true"
+        android:smoothScrollbar="true" >
+           
+    </ListView>
+    
+    
+
+</LinearLayout>
