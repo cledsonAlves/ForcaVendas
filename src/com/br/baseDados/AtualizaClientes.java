@@ -23,13 +23,25 @@ import com.google.gson.reflect.TypeToken;
 
 public class AtualizaClientes {
 	String ip = "lojakelma.com.br";
-	String usuario = "site1368285974";
-	String senha = "kelma@12";
+	String usuario ;
+	String senha ;
 	String diretorio = "/Pedidos/";
 	String destino = "C:/Users/Cledson/Desktop/Comunicador/Pedidos/";
 	FTPClient ftp;
 	private Handler handler = new Handler();
 	ProgressDialog dialogs ;
+	
+	
+	
+	//  construtor
+	public  AtualizaClientes(String ip, String usuario, String senha, String diretorio){
+		this.ip = ip;
+		this.usuario = usuario;
+		this.senha = senha;
+		this.diretorio = diretorio;
+		
+	}
+	
 
 	
 	//  Método faz a leitura do arquivo json ( Clientes)
@@ -72,6 +84,8 @@ public class AtualizaClientes {
 	// Método carrega clientes do ftp ...
 	public boolean enviaPedido(final Context ctx) {
 		
+		
+		
 		FTPClient ftp = new FTPClient();
 
 		try {
@@ -79,7 +93,7 @@ public class AtualizaClientes {
 			if (FTPReply.isPositiveCompletion(ftp.getReplyCode())) {
 				ftp.login(usuario, senha);
 				ftp.enterLocalPassiveMode();
-				ftp.changeWorkingDirectory("/Pedidos/Cledson/Clientes/");
+				ftp.changeWorkingDirectory(diretorio+"/Clientes/");
 			}
 			if (ftp.isConnected()) {
 				// abre um stream com o arquivo a ser enviado
