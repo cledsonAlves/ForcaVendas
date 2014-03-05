@@ -1,0 +1,75 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    
+    android:padding="5dp" >
+
+    <ImageView
+        android:id="@+id/imageState"
+        android:layout_width="90dp"
+        android:layout_height="62dp"
+        android:src="@drawable/nil" />
+
+    <TextView
+        android:id="@+id/textState"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/imageState"
+        android:layout_toRightOf="@+id/imageState"
+        android:paddingLeft="5dp"
+        android:text="XAMPU CERAMIDAS "
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:textSize="20sp" />
+
+    <TextView
+        android:id="@+id/textArea"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/textState"
+        android:text="10,75"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:textColor="@color/vermelho" />
+
+    <TextView
+        android:id="@+id/textViewQtItem"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/textState"
+        android:layout_below="@+id/textState"
+        android:text="Cód :"
+        android:textAppearance="?android:attr/textAppearanceLarge" />
+
+    <TextView
+        android:id="@+id/textCodProd"
+        android:layout_width="80dp"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/imageState"
+        android:layout_below="@+id/textState"
+        android:layout_toRightOf="@+id/textViewQtItem"
+        android:text="1225"
+        android:textAppearance="?android:attr/textAppearanceLarge" />
+
+    <TextView
+        android:id="@+id/textRepresentante"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/textArea"
+        android:layout_alignBottom="@+id/textArea"
+        android:layout_toLeftOf="@+id/textArea"
+        android:text="R$" />
+
+    <TextView
+        android:id="@+id/textCapital"
+        android:layout_width="130dp"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/textCodProd"
+        android:layout_alignBottom="@+id/textCodProd"
+        android:layout_alignLeft="@+id/textCodProd"
+        android:layout_marginLeft="58dp"
+        android:paddingLeft="5dp"
+        android:text="GL 4800"
+        android:textAppearance="?android:attr/textAppearanceLarge" />
+
+</RelativeLayout>

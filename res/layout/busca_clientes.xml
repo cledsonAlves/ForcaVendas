@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="180dp"
+    android:background="@drawable/background"
+    android:padding="5dp" >
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:src="@drawable/vendedor" />
+
+    <TextView
+        android:id="@+id/textCliente"
+        android:layout_width="450dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_toRightOf="@+id/imageView"
+        android:text=" Cliente"
+        android:textAppearance="?android:attr/textAppearanceLarge" />
+
+    <TextView
+        android:id="@+id/textViewQtItem"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/textCliente"
+        android:text="Código :"
+        android:textColor="#CCFFFF" />
+
+    <TextView
+        android:id="@+id/textCod"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textCliente"
+        android:layout_toRightOf="@+id/textViewQtItem"
+        android:text="12045" />
+
+    <TextView
+        android:id="@+id/textCnpj"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/imageView"
+        android:layout_toRightOf="@+id/textCliente"
+        android:text="Cnpj / Cpf :"
+        android:textColor="#CCFFFF" />
+
+    <TextView
+        android:id="@+id/txtViewTabela"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/textCnpj"
+        android:layout_alignBottom="@+id/textCnpj"
+        android:layout_toRightOf="@+id/textCnpj"
+        android:text="3425.7892/788" />
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textCliente"
+        android:layout_marginLeft="42dp"
+        android:layout_toRightOf="@+id/textCod"
+        android:src="@drawable/telefone32" />
+
+    <TextView
+        android:id="@+id/textTel1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/imageView2"
+        android:layout_toRightOf="@+id/imageView2"
+        android:text="(011) 4016-3516" />
+
+    <ImageView
+        android:id="@+id/imageView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textCliente"
+        android:layout_marginLeft="23dp"
+        android:layout_toRightOf="@+id/textTel1"
+        android:src="@drawable/celular32" />
+
+    <TextView
+        android:id="@+id/textTel2"
+        android:layout_width="280dp"
+        android:layout_height="wrap_content"
+        android:layout_alignRight="@+id/textCliente"
+        android:layout_alignTop="@+id/imageView3"
+        android:layout_toRightOf="@+id/imageView3"
+        android:text="(011) 9809-0210" />
+
+    <ImageView
+        android:id="@+id/imageView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignRight="@+id/textCliente"
+        android:layout_below="@+id/textCliente"
+        android:src="@drawable/email32" />
+
+    <TextView
+        android:id="@+id/textEmail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/textTel2"
+        android:layout_alignBottom="@+id/textTel2"
+        android:layout_alignLeft="@+id/textCnpj"
+        android:text=" clsddd@hotmail.com" />
+
+    <TextView
+        android:id="@+id/textRepresentante"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/textViewQtItem"
+        android:layout_below="@+id/imageView2"
+        android:text="End : "
+        android:textColor="#CCFFFF" />
+
+    <TextView
+        android:id="@+id/textEnd"
+        android:layout_width="260dp"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/textRepresentante"
+        android:layout_alignBottom="@+id/textRepresentante"
+        android:layout_toRightOf="@+id/textRepresentante"
+        android:text="Rua Artur Bernades 988" />
+
+    <TextView
+        android:id="@+id/textViewEnd"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/textEnd"
+        android:layout_alignBottom="@+id/textEnd"
+        android:layout_alignLeft="@+id/textTel2"
+        android:text="Cidade : "
+        android:textColor="#CCFFFF" />
+
+    <TextView
+        android:id="@+id/textCidade"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/textViewValor"
+        android:layout_alignBottom="@+id/textViewValor"
+        android:layout_toLeftOf="@+id/textEmail"
+        android:layout_toRightOf="@+id/textViewValor"
+        android:text="Jundiai" />
+
+    <TextView
+        android:id="@+id/textViewQtde"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/textCidade"
+        android:layout_alignBottom="@+id/textCidade"
+        android:layout_alignRight="@+id/textCnpj"
+        android:text="Estado : "
+        android:textColor="#CCFFFF" />
+
+    <TextView
+        android:id="@+id/textSP"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/textViewQtde"
+        android:layout_alignBottom="@+id/textViewQtde"
+        android:layout_alignRight="@+id/textEmail"
+        android:layout_toRightOf="@+id/textViewQtde"
+        android:text="São Paulo" />
+
+    <TextView
+        android:id="@+id/textViewCidade"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/textSP"
+        android:layout_alignBottom="@+id/textSP"
+        android:text=" - " />
+
+    <TextView
+        android:id="@+id/textUf"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignRight="@+id/txtViewTabela"
+        android:layout_below="@+id/imageView4"
+        android:text="UF" />
+
+    <TextView
+        android:id="@+id/textView7"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/textUf"
+        android:layout_toLeftOf="@+id/textUf"
+        android:layout_toRightOf="@+id/textEmail"
+        android:text="-"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+</RelativeLayout>

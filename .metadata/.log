@@ -1,0 +1,323 @@
+!SESSION 2012-09-30 15:22:34.969 -----------------------------------------------
+eclipse.buildId=M20110210-1200
+java.version=1.6.0_31
+java.vendor=Sun Microsystems Inc.
+BootLoader constants: OS=win32, ARCH=x86, WS=win32, NL=pt_BR
+Framework arguments:  -product org.eclipse.epp.package.java.product
+Command-line arguments:  -os win32 -ws win32 -arch x86 -product org.eclipse.epp.package.java.product
+
+!ENTRY org.eclipse.equinox.p2.core 4 0 2012-09-30 15:24:53.233
+!MESSAGE Provisioning exception
+!STACK 1
+org.eclipse.equinox.p2.core.ProvisionException: Unable to read repository at http://eclipse.com.
+	at org.eclipse.equinox.internal.p2.metadata.repository.SimpleMetadataRepositoryFactory.load(SimpleMetadataRepositoryFactory.java:128)
+	at org.eclipse.equinox.internal.p2.metadata.repository.MetadataRepositoryManager.factoryLoad(MetadataRepositoryManager.java:57)
+	at org.eclipse.equinox.internal.p2.repository.helpers.AbstractRepositoryManager.loadRepository(AbstractRepositoryManager.java:746)
+	at org.eclipse.equinox.internal.p2.repository.helpers.AbstractRepositoryManager.loadRepository(AbstractRepositoryManager.java:651)
+	at org.eclipse.equinox.internal.p2.metadata.repository.MetadataRepositoryManager.loadRepository(MetadataRepositoryManager.java:96)
+	at org.eclipse.equinox.internal.p2.metadata.repository.MetadataRepositoryManager.loadRepository(MetadataRepositoryManager.java:92)
+	at org.eclipse.equinox.p2.ui.LoadMetadataRepositoryJob.doLoad(LoadMetadataRepositoryJob.java:115)
+	at org.eclipse.equinox.p2.ui.LoadMetadataRepositoryJob.runModal(LoadMetadataRepositoryJob.java:100)
+	at org.eclipse.equinox.internal.p2.ui.sdk.PreloadingRepositoryHandler$2.runModal(PreloadingRepositoryHandler.java:82)
+	at org.eclipse.equinox.p2.operations.ProvisioningJob.run(ProvisioningJob.java:177)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+Caused by: java.io.IOException: http://eclipse.com is not a valid repository location.
+	at org.eclipse.equinox.internal.p2.metadata.repository.SimpleMetadataRepositoryFactory.load(SimpleMetadataRepositoryFactory.java:102)
+	... 10 more
+!SUBENTRY 1 org.eclipse.equinox.p2.metadata.repository 4 1002 2012-09-30 15:24:53.265
+!MESSAGE Unable to read repository at http://eclipse.com.
+!STACK 0
+java.io.IOException: http://eclipse.com is not a valid repository location.
+	at org.eclipse.equinox.internal.p2.metadata.repository.SimpleMetadataRepositoryFactory.load(SimpleMetadataRepositoryFactory.java:102)
+	at org.eclipse.equinox.internal.p2.metadata.repository.MetadataRepositoryManager.factoryLoad(MetadataRepositoryManager.java:57)
+	at org.eclipse.equinox.internal.p2.repository.helpers.AbstractRepositoryManager.loadRepository(AbstractRepositoryManager.java:746)
+	at org.eclipse.equinox.internal.p2.repository.helpers.AbstractRepositoryManager.loadRepository(AbstractRepositoryManager.java:651)
+	at org.eclipse.equinox.internal.p2.metadata.repository.MetadataRepositoryManager.loadRepository(MetadataRepositoryManager.java:96)
+	at org.eclipse.equinox.internal.p2.metadata.repository.MetadataRepositoryManager.loadRepository(MetadataRepositoryManager.java:92)
+	at org.eclipse.equinox.p2.ui.LoadMetadataRepositoryJob.doLoad(LoadMetadataRepositoryJob.java:115)
+	at org.eclipse.equinox.p2.ui.LoadMetadataRepositoryJob.runModal(LoadMetadataRepositoryJob.java:100)
+	at org.eclipse.equinox.internal.p2.ui.sdk.PreloadingRepositoryHandler$2.runModal(PreloadingRepositoryHandler.java:82)
+	at org.eclipse.equinox.p2.operations.ProvisioningJob.run(ProvisioningJob.java:177)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+
+!ENTRY org.eclipse.equinox.p2.core 4 0 2012-09-30 15:24:56.855
+!MESSAGE Provisioning exception
+!STACK 1
+org.eclipse.equinox.p2.core.ProvisionException: No repository found at http://dl-ssl.google.com/android/eclipse%20/.
+	at org.eclipse.equinox.internal.p2.repository.helpers.AbstractRepositoryManager.fail(AbstractRepositoryManager.java:391)
+	at org.eclipse.equinox.internal.p2.repository.helpers.AbstractRepositoryManager.loadRepository(AbstractRepositoryManager.java:675)
+	at org.eclipse.equinox.internal.p2.metadata.repository.MetadataRepositoryManager.loadRepository(MetadataRepositoryManager.java:96)
+	at org.eclipse.equinox.internal.p2.metadata.repository.MetadataRepositoryManager.loadRepository(MetadataRepositoryManager.java:92)
+	at org.eclipse.equinox.p2.ui.LoadMetadataRepositoryJob.doLoad(LoadMetadataRepositoryJob.java:115)
+	at org.eclipse.equinox.p2.ui.LoadMetadataRepositoryJob.runModal(LoadMetadataRepositoryJob.java:100)
+	at org.eclipse.equinox.internal.p2.ui.sdk.PreloadingRepositoryHandler$2.runModal(PreloadingRepositoryHandler.java:82)
+	at org.eclipse.equinox.p2.operations.ProvisioningJob.run(ProvisioningJob.java:177)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+!SUBENTRY 1 org.eclipse.equinox.p2.metadata.repository 4 1000 2012-09-30 15:24:56.855
+!MESSAGE No repository found at http://dl-ssl.google.com/android/eclipse%20/.
+
+!ENTRY org.eclipse.equinox.p2.core 4 0 2012-09-30 15:24:56.970
+!MESSAGE Provisioning exception
+!STACK 1
+org.eclipse.equinox.p2.core.ProvisionException: Unable to read repository at https:/%20/%20dl-ssl.google.com/android/eclipse%20/content.xml.
+	at org.eclipse.equinox.internal.p2.repository.CacheManager.createCache(CacheManager.java:189)
+	at org.eclipse.equinox.internal.p2.metadata.repository.SimpleMetadataRepositoryFactory.getLocalFile(SimpleMetadataRepositoryFactory.java:66)
+	at org.eclipse.equinox.internal.p2.metadata.repository.SimpleMetadataRepositoryFactory.load(SimpleMetadataRepositoryFactory.java:88)
+	at org.eclipse.equinox.internal.p2.metadata.repository.MetadataRepositoryManager.factoryLoad(MetadataRepositoryManager.java:57)
+	at org.eclipse.equinox.internal.p2.repository.helpers.AbstractRepositoryManager.loadRepository(AbstractRepositoryManager.java:746)
+	at org.eclipse.equinox.internal.p2.repository.helpers.AbstractRepositoryManager.loadRepository(AbstractRepositoryManager.java:651)
+	at org.eclipse.equinox.internal.p2.metadata.repository.MetadataRepositoryManager.loadRepository(MetadataRepositoryManager.java:96)
+	at org.eclipse.equinox.internal.p2.metadata.repository.MetadataRepositoryManager.loadRepository(MetadataRepositoryManager.java:92)
+	at org.eclipse.equinox.p2.ui.LoadMetadataRepositoryJob.doLoad(LoadMetadataRepositoryJob.java:115)
+	at org.eclipse.equinox.p2.ui.LoadMetadataRepositoryJob.runModal(LoadMetadataRepositoryJob.java:100)
+	at org.eclipse.equinox.internal.p2.ui.sdk.PreloadingRepositoryHandler$2.runModal(PreloadingRepositoryHandler.java:82)
+	at org.eclipse.equinox.p2.operations.ProvisioningJob.run(ProvisioningJob.java:177)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+Caused by: java.lang.IllegalArgumentException: Host name may not be null
+	at org.apache.commons.httpclient.HttpHost.<init>(HttpHost.java:68)
+	at org.apache.commons.httpclient.HttpHost.<init>(HttpHost.java:107)
+	at org.apache.commons.httpclient.HttpMethodBase.setURI(HttpMethodBase.java:280)
+	at org.apache.commons.httpclient.HttpMethodBase.<init>(HttpMethodBase.java:220)
+	at org.apache.commons.httpclient.methods.HeadMethod.<init>(HeadMethod.java:94)
+	at org.eclipse.ecf.provider.filetransfer.httpclient.HttpClientFileSystemBrowser.runRequest(HttpClientFileSystemBrowser.java:212)
+	at org.eclipse.ecf.provider.filetransfer.browse.AbstractFileSystemBrowser$DirectoryJob.run(AbstractFileSystemBrowser.java:69)
+	... 1 more
+!SUBENTRY 1 org.eclipse.equinox.p2.repository 4 1002 2012-09-30 15:24:56.972
+!MESSAGE Unable to read repository at https:/%20/%20dl-ssl.google.com/android/eclipse%20/content.xml.
+!STACK 0
+java.lang.IllegalArgumentException: Host name may not be null
+	at org.apache.commons.httpclient.HttpHost.<init>(HttpHost.java:68)
+	at org.apache.commons.httpclient.HttpHost.<init>(HttpHost.java:107)
+	at org.apache.commons.httpclient.HttpMethodBase.setURI(HttpMethodBase.java:280)
+	at org.apache.commons.httpclient.HttpMethodBase.<init>(HttpMethodBase.java:220)
+	at org.apache.commons.httpclient.methods.HeadMethod.<init>(HeadMethod.java:94)
+	at org.eclipse.ecf.provider.filetransfer.httpclient.HttpClientFileSystemBrowser.runRequest(HttpClientFileSystemBrowser.java:212)
+	at org.eclipse.ecf.provider.filetransfer.browse.AbstractFileSystemBrowser$DirectoryJob.run(AbstractFileSystemBrowser.java:69)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+
+!ENTRY org.eclipse.equinox.p2.core 4 0 2012-09-30 15:24:59.669
+!MESSAGE Provisioning exception
+!STACK 1
+org.eclipse.equinox.p2.core.ProvisionException: Unknown Host: http://http/www.apache.org/dyn/closer.cgi/poi/dev/src/poi-src-3.8-beta4-20110826.zip/content.xml
+	at org.eclipse.equinox.internal.p2.repository.CacheManager.createCache(CacheManager.java:189)
+	at org.eclipse.equinox.internal.p2.metadata.repository.SimpleMetadataRepositoryFactory.getLocalFile(SimpleMetadataRepositoryFactory.java:66)
+	at org.eclipse.equinox.internal.p2.metadata.repository.SimpleMetadataRepositoryFactory.load(SimpleMetadataRepositoryFactory.java:88)
+	at org.eclipse.equinox.internal.p2.metadata.repository.MetadataRepositoryManager.factoryLoad(MetadataRepositoryManager.java:57)
+	at org.eclipse.equinox.internal.p2.repository.helpers.AbstractRepositoryManager.loadRepository(AbstractRepositoryManager.java:746)
+	at org.eclipse.equinox.internal.p2.repository.helpers.AbstractRepositoryManager.loadRepository(AbstractRepositoryManager.java:651)
+	at org.eclipse.equinox.internal.p2.metadata.repository.MetadataRepositoryManager.loadRepository(MetadataRepositoryManager.java:96)
+	at org.eclipse.equinox.internal.p2.metadata.repository.MetadataRepositoryManager.loadRepository(MetadataRepositoryManager.java:92)
+	at org.eclipse.equinox.p2.ui.LoadMetadataRepositoryJob.doLoad(LoadMetadataRepositoryJob.java:115)
+	at org.eclipse.equinox.p2.ui.LoadMetadataRepositoryJob.runModal(LoadMetadataRepositoryJob.java:100)
+	at org.eclipse.equinox.internal.p2.ui.sdk.PreloadingRepositoryHandler$2.runModal(PreloadingRepositoryHandler.java:82)
+	at org.eclipse.equinox.p2.operations.ProvisioningJob.run(ProvisioningJob.java:177)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+Caused by: java.net.UnknownHostException: http
+	at java.net.PlainSocketImpl.connect(Unknown Source)
+	at java.net.SocksSocketImpl.connect(Unknown Source)
+	at java.net.Socket.connect(Unknown Source)
+	at org.eclipse.ecf.provider.filetransfer.events.socket.SocketEventCreateUtil.createSocket(SocketEventCreateUtil.java:43)
+	at org.eclipse.ecf.internal.provider.filetransfer.httpclient.ECFHttpClientProtocolSocketFactory.createSocket(ECFHttpClientProtocolSocketFactory.java:81)
+	at org.eclipse.ecf.internal.provider.filetransfer.httpclient.ECFHttpClientProtocolSocketFactory.createSocket(ECFHttpClientProtocolSocketFactory.java:73)
+	at org.eclipse.ecf.internal.provider.filetransfer.httpclient.ECFHttpClientProtocolSocketFactory.createSocket(ECFHttpClientProtocolSocketFactory.java:65)
+	at org.apache.commons.httpclient.HttpConnection.open(HttpConnection.java:707)
+	at org.apache.commons.httpclient.MultiThreadedHttpConnectionManager$HttpConnectionAdapter.open(MultiThreadedHttpConnectionManager.java:1361)
+	at org.apache.commons.httpclient.HttpMethodDirector.executeWithRetry(HttpMethodDirector.java:387)
+	at org.apache.commons.httpclient.HttpMethodDirector.executeMethod(HttpMethodDirector.java:171)
+	at org.apache.commons.httpclient.HttpClient.executeMethod(HttpClient.java:397)
+	at org.apache.commons.httpclient.HttpClient.executeMethod(HttpClient.java:346)
+	at org.eclipse.ecf.provider.filetransfer.httpclient.HttpClientFileSystemBrowser.runRequest(HttpClientFileSystemBrowser.java:227)
+	at org.eclipse.ecf.provider.filetransfer.browse.AbstractFileSystemBrowser$DirectoryJob.run(AbstractFileSystemBrowser.java:69)
+	... 1 more
+!SUBENTRY 1 org.eclipse.equinox.p2.repository 4 1006 2012-09-30 15:24:59.670
+!MESSAGE Unknown Host: http://http/www.apache.org/dyn/closer.cgi/poi/dev/src/poi-src-3.8-beta4-20110826.zip/content.xml
+!STACK 0
+java.net.UnknownHostException: http
+	at java.net.PlainSocketImpl.connect(Unknown Source)
+	at java.net.SocksSocketImpl.connect(Unknown Source)
+	at java.net.Socket.connect(Unknown Source)
+	at org.eclipse.ecf.provider.filetransfer.events.socket.SocketEventCreateUtil.createSocket(SocketEventCreateUtil.java:43)
+	at org.eclipse.ecf.internal.provider.filetransfer.httpclient.ECFHttpClientProtocolSocketFactory.createSocket(ECFHttpClientProtocolSocketFactory.java:81)
+	at org.eclipse.ecf.internal.provider.filetransfer.httpclient.ECFHttpClientProtocolSocketFactory.createSocket(ECFHttpClientProtocolSocketFactory.java:73)
+	at org.eclipse.ecf.internal.provider.filetransfer.httpclient.ECFHttpClientProtocolSocketFactory.createSocket(ECFHttpClientProtocolSocketFactory.java:65)
+	at org.apache.commons.httpclient.HttpConnection.open(HttpConnection.java:707)
+	at org.apache.commons.httpclient.MultiThreadedHttpConnectionManager$HttpConnectionAdapter.open(MultiThreadedHttpConnectionManager.java:1361)
+	at org.apache.commons.httpclient.HttpMethodDirector.executeWithRetry(HttpMethodDirector.java:387)
+	at org.apache.commons.httpclient.HttpMethodDirector.executeMethod(HttpMethodDirector.java:171)
+	at org.apache.commons.httpclient.HttpClient.executeMethod(HttpClient.java:397)
+	at org.apache.commons.httpclient.HttpClient.executeMethod(HttpClient.java:346)
+	at org.eclipse.ecf.provider.filetransfer.httpclient.HttpClientFileSystemBrowser.runRequest(HttpClientFileSystemBrowser.java:227)
+	at org.eclipse.ecf.provider.filetransfer.browse.AbstractFileSystemBrowser$DirectoryJob.run(AbstractFileSystemBrowser.java:69)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+
+!ENTRY org.eclipse.equinox.p2.core 4 0 2012-09-30 15:25:46.064
+!MESSAGE Provisioning exception
+!STACK 1
+org.eclipse.equinox.p2.core.ProvisionException: Unable to read repository at https:%20//%20dl-ssl.google.com/android/eclipse%20/content.xml.
+	at org.eclipse.equinox.internal.p2.repository.CacheManager.createCache(CacheManager.java:189)
+	at org.eclipse.equinox.internal.p2.metadata.repository.SimpleMetadataRepositoryFactory.getLocalFile(SimpleMetadataRepositoryFactory.java:66)
+	at org.eclipse.equinox.internal.p2.metadata.repository.SimpleMetadataRepositoryFactory.load(SimpleMetadataRepositoryFactory.java:88)
+	at org.eclipse.equinox.internal.p2.metadata.repository.MetadataRepositoryManager.factoryLoad(MetadataRepositoryManager.java:57)
+	at org.eclipse.equinox.internal.p2.repository.helpers.AbstractRepositoryManager.loadRepository(AbstractRepositoryManager.java:746)
+	at org.eclipse.equinox.internal.p2.repository.helpers.AbstractRepositoryManager.loadRepository(AbstractRepositoryManager.java:651)
+	at org.eclipse.equinox.internal.p2.metadata.repository.MetadataRepositoryManager.loadRepository(MetadataRepositoryManager.java:96)
+	at org.eclipse.equinox.internal.p2.metadata.repository.MetadataRepositoryManager.loadRepository(MetadataRepositoryManager.java:92)
+	at org.eclipse.equinox.p2.ui.LoadMetadataRepositoryJob.doLoad(LoadMetadataRepositoryJob.java:115)
+	at org.eclipse.equinox.p2.ui.LoadMetadataRepositoryJob.runModal(LoadMetadataRepositoryJob.java:100)
+	at org.eclipse.equinox.internal.p2.ui.sdk.PreloadingRepositoryHandler$2.runModal(PreloadingRepositoryHandler.java:82)
+	at org.eclipse.equinox.p2.operations.ProvisioningJob.run(ProvisioningJob.java:177)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+Caused by: java.lang.IllegalArgumentException: Host name may not be null
+	at org.apache.commons.httpclient.HttpHost.<init>(HttpHost.java:68)
+	at org.apache.commons.httpclient.HttpHost.<init>(HttpHost.java:107)
+	at org.apache.commons.httpclient.HttpMethodBase.setURI(HttpMethodBase.java:280)
+	at org.apache.commons.httpclient.HttpMethodBase.<init>(HttpMethodBase.java:220)
+	at org.apache.commons.httpclient.methods.HeadMethod.<init>(HeadMethod.java:94)
+	at org.eclipse.ecf.provider.filetransfer.httpclient.HttpClientFileSystemBrowser.runRequest(HttpClientFileSystemBrowser.java:212)
+	at org.eclipse.ecf.provider.filetransfer.browse.AbstractFileSystemBrowser$DirectoryJob.run(AbstractFileSystemBrowser.java:69)
+	... 1 more
+!SUBENTRY 1 org.eclipse.equinox.p2.repository 4 1002 2012-09-30 15:25:46.065
+!MESSAGE Unable to read repository at https:%20//%20dl-ssl.google.com/android/eclipse%20/content.xml.
+!STACK 0
+java.lang.IllegalArgumentException: Host name may not be null
+	at org.apache.commons.httpclient.HttpHost.<init>(HttpHost.java:68)
+	at org.apache.commons.httpclient.HttpHost.<init>(HttpHost.java:107)
+	at org.apache.commons.httpclient.HttpMethodBase.setURI(HttpMethodBase.java:280)
+	at org.apache.commons.httpclient.HttpMethodBase.<init>(HttpMethodBase.java:220)
+	at org.apache.commons.httpclient.methods.HeadMethod.<init>(HeadMethod.java:94)
+	at org.eclipse.ecf.provider.filetransfer.httpclient.HttpClientFileSystemBrowser.runRequest(HttpClientFileSystemBrowser.java:212)
+	at org.eclipse.ecf.provider.filetransfer.browse.AbstractFileSystemBrowser$DirectoryJob.run(AbstractFileSystemBrowser.java:69)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+
+!ENTRY org.eclipse.equinox.p2.core 4 0 2012-09-30 15:25:48.910
+!MESSAGE Provisioning exception
+!STACK 1
+org.eclipse.equinox.p2.core.ProvisionException: Unknown Host: http://http/www.apache.org/content.xml
+	at org.eclipse.equinox.internal.p2.repository.CacheManager.createCache(CacheManager.java:189)
+	at org.eclipse.equinox.internal.p2.metadata.repository.SimpleMetadataRepositoryFactory.getLocalFile(SimpleMetadataRepositoryFactory.java:66)
+	at org.eclipse.equinox.internal.p2.metadata.repository.SimpleMetadataRepositoryFactory.load(SimpleMetadataRepositoryFactory.java:88)
+	at org.eclipse.equinox.internal.p2.metadata.repository.MetadataRepositoryManager.factoryLoad(MetadataRepositoryManager.java:57)
+	at org.eclipse.equinox.internal.p2.repository.helpers.AbstractRepositoryManager.loadRepository(AbstractRepositoryManager.java:746)
+	at org.eclipse.equinox.internal.p2.repository.helpers.AbstractRepositoryManager.loadRepository(AbstractRepositoryManager.java:651)
+	at org.eclipse.equinox.internal.p2.metadata.repository.MetadataRepositoryManager.loadRepository(MetadataRepositoryManager.java:96)
+	at org.eclipse.equinox.internal.p2.metadata.repository.MetadataRepositoryManager.loadRepository(MetadataRepositoryManager.java:92)
+	at org.eclipse.equinox.p2.ui.LoadMetadataRepositoryJob.doLoad(LoadMetadataRepositoryJob.java:115)
+	at org.eclipse.equinox.p2.ui.LoadMetadataRepositoryJob.runModal(LoadMetadataRepositoryJob.java:100)
+	at org.eclipse.equinox.internal.p2.ui.sdk.PreloadingRepositoryHandler$2.runModal(PreloadingRepositoryHandler.java:82)
+	at org.eclipse.equinox.p2.operations.ProvisioningJob.run(ProvisioningJob.java:177)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+Caused by: java.net.UnknownHostException: http
+	at java.net.PlainSocketImpl.connect(Unknown Source)
+	at java.net.SocksSocketImpl.connect(Unknown Source)
+	at java.net.Socket.connect(Unknown Source)
+	at org.eclipse.ecf.provider.filetransfer.events.socket.SocketEventCreateUtil.createSocket(SocketEventCreateUtil.java:43)
+	at org.eclipse.ecf.internal.provider.filetransfer.httpclient.ECFHttpClientProtocolSocketFactory.createSocket(ECFHttpClientProtocolSocketFactory.java:81)
+	at org.eclipse.ecf.internal.provider.filetransfer.httpclient.ECFHttpClientProtocolSocketFactory.createSocket(ECFHttpClientProtocolSocketFactory.java:73)
+	at org.eclipse.ecf.internal.provider.filetransfer.httpclient.ECFHttpClientProtocolSocketFactory.createSocket(ECFHttpClientProtocolSocketFactory.java:65)
+	at org.apache.commons.httpclient.HttpConnection.open(HttpConnection.java:707)
+	at org.apache.commons.httpclient.MultiThreadedHttpConnectionManager$HttpConnectionAdapter.open(MultiThreadedHttpConnectionManager.java:1361)
+	at org.apache.commons.httpclient.HttpMethodDirector.executeWithRetry(HttpMethodDirector.java:387)
+	at org.apache.commons.httpclient.HttpMethodDirector.executeMethod(HttpMethodDirector.java:171)
+	at org.apache.commons.httpclient.HttpClient.executeMethod(HttpClient.java:397)
+	at org.apache.commons.httpclient.HttpClient.executeMethod(HttpClient.java:346)
+	at org.eclipse.ecf.provider.filetransfer.httpclient.HttpClientFileSystemBrowser.runRequest(HttpClientFileSystemBrowser.java:227)
+	at org.eclipse.ecf.provider.filetransfer.browse.AbstractFileSystemBrowser$DirectoryJob.run(AbstractFileSystemBrowser.java:69)
+	... 1 more
+!SUBENTRY 1 org.eclipse.equinox.p2.repository 4 1006 2012-09-30 15:25:48.911
+!MESSAGE Unknown Host: http://http/www.apache.org/content.xml
+!STACK 0
+java.net.UnknownHostException: http
+	at java.net.PlainSocketImpl.connect(Unknown Source)
+	at java.net.SocksSocketImpl.connect(Unknown Source)
+	at java.net.Socket.connect(Unknown Source)
+	at org.eclipse.ecf.provider.filetransfer.events.socket.SocketEventCreateUtil.createSocket(SocketEventCreateUtil.java:43)
+	at org.eclipse.ecf.internal.provider.filetransfer.httpclient.ECFHttpClientProtocolSocketFactory.createSocket(ECFHttpClientProtocolSocketFactory.java:81)
+	at org.eclipse.ecf.internal.provider.filetransfer.httpclient.ECFHttpClientProtocolSocketFactory.createSocket(ECFHttpClientProtocolSocketFactory.java:73)
+	at org.eclipse.ecf.internal.provider.filetransfer.httpclient.ECFHttpClientProtocolSocketFactory.createSocket(ECFHttpClientProtocolSocketFactory.java:65)
+	at org.apache.commons.httpclient.HttpConnection.open(HttpConnection.java:707)
+	at org.apache.commons.httpclient.MultiThreadedHttpConnectionManager$HttpConnectionAdapter.open(MultiThreadedHttpConnectionManager.java:1361)
+	at org.apache.commons.httpclient.HttpMethodDirector.executeWithRetry(HttpMethodDirector.java:387)
+	at org.apache.commons.httpclient.HttpMethodDirector.executeMethod(HttpMethodDirector.java:171)
+	at org.apache.commons.httpclient.HttpClient.executeMethod(HttpClient.java:397)
+	at org.apache.commons.httpclient.HttpClient.executeMethod(HttpClient.java:346)
+	at org.eclipse.ecf.provider.filetransfer.httpclient.HttpClientFileSystemBrowser.runRequest(HttpClientFileSystemBrowser.java:227)
+	at org.eclipse.ecf.provider.filetransfer.browse.AbstractFileSystemBrowser$DirectoryJob.run(AbstractFileSystemBrowser.java:69)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+
+!ENTRY org.eclipse.equinox.p2.core 4 0 2012-09-30 15:25:53.213
+!MESSAGE Provisioning exception
+!STACK 1
+org.eclipse.equinox.p2.core.ProvisionException: HTTP Method Not Allowed: http://developer.android.com/sdk/eclipse-adt.html/content.xml
+	at org.eclipse.equinox.internal.p2.repository.CacheManager.createCache(CacheManager.java:189)
+	at org.eclipse.equinox.internal.p2.metadata.repository.SimpleMetadataRepositoryFactory.getLocalFile(SimpleMetadataRepositoryFactory.java:66)
+	at org.eclipse.equinox.internal.p2.metadata.repository.SimpleMetadataRepositoryFactory.load(SimpleMetadataRepositoryFactory.java:88)
+	at org.eclipse.equinox.internal.p2.metadata.repository.MetadataRepositoryManager.factoryLoad(MetadataRepositoryManager.java:57)
+	at org.eclipse.equinox.internal.p2.repository.helpers.AbstractRepositoryManager.loadRepository(AbstractRepositoryManager.java:746)
+	at org.eclipse.equinox.internal.p2.repository.helpers.AbstractRepositoryManager.loadRepository(AbstractRepositoryManager.java:651)
+	at org.eclipse.equinox.internal.p2.metadata.repository.MetadataRepositoryManager.loadRepository(MetadataRepositoryManager.java:96)
+	at org.eclipse.equinox.internal.p2.metadata.repository.MetadataRepositoryManager.loadRepository(MetadataRepositoryManager.java:92)
+	at org.eclipse.equinox.p2.ui.LoadMetadataRepositoryJob.doLoad(LoadMetadataRepositoryJob.java:115)
+	at org.eclipse.equinox.p2.ui.LoadMetadataRepositoryJob.runModal(LoadMetadataRepositoryJob.java:100)
+	at org.eclipse.equinox.internal.p2.ui.sdk.PreloadingRepositoryHandler$2.runModal(PreloadingRepositoryHandler.java:82)
+	at org.eclipse.equinox.p2.operations.ProvisioningJob.run(ProvisioningJob.java:177)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+Caused by: org.eclipse.ecf.filetransfer.BrowseFileTransferException: HttpClient connection error response code 405.
+	at org.eclipse.ecf.provider.filetransfer.httpclient.HttpClientFileSystemBrowser.runRequest(HttpClientFileSystemBrowser.java:249)
+	at org.eclipse.ecf.provider.filetransfer.browse.AbstractFileSystemBrowser$DirectoryJob.run(AbstractFileSystemBrowser.java:69)
+	... 1 more
+!SUBENTRY 1 org.eclipse.equinox.p2.repository 4 1002 2012-09-30 15:25:53.214
+!MESSAGE HTTP Method Not Allowed: http://developer.android.com/sdk/eclipse-adt.html/content.xml
+!STACK 1
+org.eclipse.ecf.filetransfer.BrowseFileTransferException: HttpClient connection error response code 405.
+	at org.eclipse.ecf.provider.filetransfer.httpclient.HttpClientFileSystemBrowser.runRequest(HttpClientFileSystemBrowser.java:249)
+	at org.eclipse.ecf.provider.filetransfer.browse.AbstractFileSystemBrowser$DirectoryJob.run(AbstractFileSystemBrowser.java:69)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+!SUBENTRY 2 org.eclipse.ecf.identity 4 0 2012-09-30 15:25:53.214
+!MESSAGE HttpClient connection error response code 405.
+
+!ENTRY org.eclipse.equinox.p2.core 4 0 2012-09-30 15:26:13.457
+!MESSAGE Provisioning exception
+!STACK 1
+org.eclipse.equinox.p2.core.ProvisionException: No repository found at http://poi.apache.org/.
+	at org.eclipse.equinox.internal.p2.repository.helpers.AbstractRepositoryManager.fail(AbstractRepositoryManager.java:391)
+	at org.eclipse.equinox.internal.p2.repository.helpers.AbstractRepositoryManager.loadRepository(AbstractRepositoryManager.java:675)
+	at org.eclipse.equinox.internal.p2.metadata.repository.MetadataRepositoryManager.loadRepository(MetadataRepositoryManager.java:96)
+	at org.eclipse.equinox.internal.p2.metadata.repository.MetadataRepositoryManager.loadRepository(MetadataRepositoryManager.java:92)
+	at org.eclipse.equinox.p2.ui.LoadMetadataRepositoryJob.doLoad(LoadMetadataRepositoryJob.java:115)
+	at org.eclipse.equinox.p2.ui.LoadMetadataRepositoryJob.runModal(LoadMetadataRepositoryJob.java:100)
+	at org.eclipse.equinox.internal.p2.ui.sdk.PreloadingRepositoryHandler$2.runModal(PreloadingRepositoryHandler.java:82)
+	at org.eclipse.equinox.p2.operations.ProvisioningJob.run(ProvisioningJob.java:177)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+!SUBENTRY 1 org.eclipse.equinox.p2.metadata.repository 4 1000 2012-09-30 15:26:13.458
+!MESSAGE No repository found at http://poi.apache.org/.
+!SESSION 2012-09-30 15:35:01.607 -----------------------------------------------
+eclipse.buildId=M20110210-1200
+java.version=1.6.0_31
+java.vendor=Sun Microsystems Inc.
+BootLoader constants: OS=win32, ARCH=x86, WS=win32, NL=pt_BR
+Framework arguments:  -product org.eclipse.epp.package.java.product
+Command-line arguments:  -os win32 -ws win32 -arch x86 -product org.eclipse.epp.package.java.product
+
+!ENTRY org.eclipse.equinox.registry 2 0 2012-09-30 15:35:12.903
+!MESSAGE The extensions and extension-points from the bundle "org.hibernate.eclipse" are ignored. The bundle is not marked as singleton. 
+
+!ENTRY org.eclipse.equinox.registry 2 0 2012-09-30 15:35:12.933
+!MESSAGE The extensions and extension-points from the bundle "org.jboss.ide.eclipse.deployer.core" are ignored. The bundle is not marked as singleton. 
+
+!ENTRY org.eclipse.equinox.registry 2 0 2012-09-30 15:35:12.979
+!MESSAGE The extensions and extension-points from the bundle "org.jboss.ide.eclipse.jdt.core" are ignored. The bundle is not marked as singleton. 
+
+!ENTRY org.eclipse.equinox.registry 2 0 2012-09-30 15:35:13.122
+!MESSAGE The extensions and extension-points from the bundle "org.jboss.ide.eclipse.xdoclet.ui" are ignored. The bundle is not marked as singleton. 
+
+!ENTRY org.eclipse.ui 4 4 2012-09-30 15:36:20.456
+!MESSAGE Invalid preference page path: JSP Files
+
+!ENTRY org.eclipse.ui 4 4 2012-09-30 15:36:20.464
+!MESSAGE Invalid preference page path: CSS Files
+
+!ENTRY org.eclipse.ui 4 4 2012-09-30 15:36:20.465
+!MESSAGE Invalid preference page path: HTML Files
+
+!ENTRY org.eclipse.ui 4 4 2012-09-30 15:36:20.470
+!MESSAGE Invalid preference page path: JavaScript Files

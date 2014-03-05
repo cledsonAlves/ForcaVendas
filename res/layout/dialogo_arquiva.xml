@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/cinzabrilhante"
+    android:orientation="vertical" >
+
+ 
+
+    <RelativeLayout
+        android:id="@+id/relativeLayout1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/linearLayout2"
+        android:background="@color/cinzabrilhante"
+        android:gravity="bottom|fill" >
+    </RelativeLayout>
+
+    <Button
+        android:id="@+id/btnVoltar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:text="Excluir" />
+
+    <Button
+        android:id="@+id/btnEditar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/btnVoltar"
+        android:text="Voltar Pedido" />
+
+    <Button
+        android:id="@+id/button_cancela"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/btnEditar"
+        android:text="Cancelar" />
+
+</RelativeLayout>

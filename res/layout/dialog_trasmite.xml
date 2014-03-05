@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/cinzabrilhante"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:id="@+id/linearLayout2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/cinzaclaro" >
+
+        <ListView
+            android:id="@+id/ListViewIt"
+            android:layout_width="match_parent"
+            android:layout_height="180dip"
+            android:layout_gravity="center" >
+        </ListView>
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/relativeLayout1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/linearLayout2"
+        android:background="@color/preto"
+        android:gravity="bottom|fill" >
+
+        <TextView
+            android:id="@+id/txtQuantidade"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_marginLeft="26dp"
+            android:layout_toRightOf="@+id/textViewQtItem"
+            android:layout_weight="0.00"
+            android:text="125"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:textColor="@color/vermelho" />
+
+        <TextView
+            android:id="@+id/txtValorPedido"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/txtViewTabela"
+            android:layout_alignTop="@+id/txtViewTabela"
+            android:layout_toRightOf="@+id/txtViewTabela"
+            android:text="1228.554"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:textColor="@color/vermelho" />
+
+        <TextView
+            android:id="@+id/txtViewTabela"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/textViewQtItem"
+            android:layout_below="@+id/txtQuantidade"
+            android:text="@string/vlLiquido"
+            android:textAppearance="?android:attr/textAppearanceLarge" />
+
+        <TextView
+            android:id="@+id/textViewQtItem"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:text="@string/volumes"
+            android:textAppearance="?android:attr/textAppearanceLarge" />
+    </RelativeLayout>
+
+    <Button
+        android:id="@+id/btnTrasmitir"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/relativeLayout1"
+        android:text="Transmitir Pedido" />
+
+    <Button
+        android:id="@+id/btnVoltar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/btnTrasmitir"
+        android:text="Arquivar Pedido" />
+
+    <Button
+        android:id="@+id/btnEditar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/btnVoltar"
+        android:text="Editar Pedido" />
+
+    <Button
+        android:id="@+id/button1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/btnEditar"
+        android:text="Cancelar Operação" />
+
+</RelativeLayout>

@@ -1,0 +1,305 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/scroller"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:fillViewport="true"
+    android:background="@color/cinza" >
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" >
+        
+           <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="25dp"
+                android:background="@android:drawable/bottom_bar"
+                android:gravity="center_vertical" >
+
+                <ImageView
+                    android:id="@+id/imageView1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/at_preco" />
+
+                <TextView
+                    android:id="@+id/textViewClientes"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Tabelas de preço "
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:textColor="@color/azul" />
+
+            </LinearLayout>
+
+   
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+                         <LinearLayout
+                             android:layout_width="fill_parent"
+                             android:layout_height="61dp"
+                             android:gravity="center_vertical" >
+
+                             <Button
+                                 android:id="@+id/ButtonVista"
+                                 style="?android:attr/buttonStyleSmall"
+                                 android:layout_width="wrap_content"
+                                 android:layout_height="wrap_content"
+                                 android:layout_weight="1"
+                                 android:onClick="btn_vista"
+                                 android:text="A Vista" />
+
+                             <Button
+                                 android:id="@+id/button14"
+                                 style="?android:attr/buttonStyleSmall"
+                                 android:layout_width="wrap_content"
+                                 android:layout_height="wrap_content"
+                                 android:layout_weight="1"
+                                 android:onClick="btn_14d"
+                                 android:text="14 dias" />
+
+                             <Button
+                                 android:id="@+id/button21"
+                                 style="?android:attr/buttonStyleSmall"
+                                 android:layout_width="wrap_content"
+                                 android:layout_height="wrap_content"
+                                 android:layout_weight="1"
+                                 android:onClick="btn_21d"
+                                 android:text="21 dias" />
+
+                             <Button
+                                 android:id="@+id/button28"
+                                 style="?android:attr/buttonStyleSmall"
+                                 android:layout_width="wrap_content"
+                                 android:layout_height="wrap_content"
+                                 android:layout_weight="1"
+                                 android:onClick="btn_28d"
+                                 android:text="28 dias" />
+
+                             <Button
+                                 android:id="@+id/button35"
+                                 style="?android:attr/buttonStyleSmall"
+                                 android:layout_width="wrap_content"
+                                 android:layout_height="wrap_content"
+                                 android:layout_weight="1"
+                                 android:onClick="btn_35d"
+                                 android:text="35 dias" />
+
+                             <Button
+                                 android:id="@+id/button42"
+                                 style="?android:attr/buttonStyleSmall"
+                                 android:layout_width="wrap_content"
+                                 android:layout_height="wrap_content"
+                                 android:layout_weight="1"
+                                 android:onClick="btn_42d"
+                                 android:text="42 dias" />
+
+        </LinearLayout>
+
+         
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:background="@android:drawable/bottom_bar"
+                android:gravity="center_vertical" >
+
+                <EditText
+                    android:id="@+id/editTextNomeProd"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_weight="181.34"
+                    android:ems="10" >
+                </EditText>
+
+                <ImageButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_weight="5.91"
+                    android:onClick="btn_scanner"
+                    android:src="@drawable/barcode64" />
+
+                <ImageButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_weight="8.09"
+                    android:onClick="btn_buscaProduto"
+                    android:src="@drawable/pesquisa64" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="25dp"
+                android:background="@android:drawable/bottom_bar"
+                android:gravity="center_vertical" >
+
+                <TextView
+                    android:id="@+id/textViewQtItem"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="3.35"
+                    android:text="                 Qtd."
+                    android:textColor="@color/preto"
+                    android:textSize="20dip" />
+
+                <TextView
+                    android:id="@+id/textViewQtItem"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="3.57"
+                    android:text="@string/preco"
+                    android:textColor="@color/preto"
+                    android:textSize="20dip" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:background="@android:drawable/bottom_bar"
+                android:gravity="center_vertical" >
+
+                <ImageButton
+                    android:id="@+id/imageButtonRem"
+                    android:layout_width="wrap_content"
+                    android:layout_height="70dip"
+                    android:layout_weight="0.2"
+                    android:onClick="btn_menos"
+                    android:src="@drawable/voltar32" />
+
+                <EditText
+                    android:id="@+id/editTextQtd"
+                    android:layout_width="52dip"
+                    android:layout_height="70dip"
+                    android:layout_weight="1.75"
+                    android:ems="10"
+                    android:inputType="number" />
+
+                <ImageButton
+                    android:id="@+id/imageButtonAdd"
+                    android:layout_width="wrap_content"
+                    android:layout_height="70dip"
+                    android:layout_weight="0.2"
+                    android:onClick="btn_mais"
+                    android:src="@drawable/volta" />
+
+                <EditText
+                    android:id="@+id/editTextPreco"
+                    android:layout_width="52dip"
+                    android:layout_height="70dip"
+                    android:layout_weight="1.59"
+                    android:ems="10"
+                    android:inputType="number" >
+
+                    <requestFocus />
+                </EditText>
+
+                <ImageButton
+                    android:id="@+id/imageButton4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="70dip"
+                    android:layout_weight="0.11"
+                    android:onClick="btn_excluiItem"
+                    android:src="@drawable/retira64" />
+
+                <ImageButton
+                    android:id="@+id/imageButton3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="70dip"
+                    android:layout_weight="0.14"
+                    android:onClick="btn_adciona"
+                    android:src="@drawable/adiciona64" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:background="@android:drawable/alert_light_frame"
+                android:gravity="center_vertical" >
+
+                <ListView
+                    android:id="@+id/listViewItens"
+                    android:layout_width="match_parent"
+                    android:layout_height="250dp"
+                    android:background="@android:drawable/bottom_bar"
+                    android:cacheColorHint="@color/cinzabrilhante"
+                    android:dividerHeight="1dip"
+                    android:smoothScrollbar="true"
+                    android:textSize="5sp" >
+                </ListView>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="25dp"
+                android:background="@android:drawable/bottom_bar"
+                android:gravity="center_vertical" >
+
+                <TextView
+                    android:id="@+id/textViewQtItem"
+                    android:layout_width="158dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="26.05"
+                    android:text="                                                                      Qtd. Itens"
+                    android:textColor="@color/preto"
+                    android:textSize="20dip" />
+
+                <TextView
+                    android:id="@+id/textViewQtItem"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="29.76"
+                    android:text="        Total R$."
+                    android:textColor="@color/preto"
+                    android:textSize="20dip" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:background="@android:drawable/bottom_bar"
+                android:gravity="center_vertical" >
+
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1.24"
+                    android:onClick="btn_cancela"
+                    android:text="Sair" />
+
+                <EditText
+                    android:id="@+id/editTextTotalItens"
+                    android:layout_width="91dip"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.45"
+                    android:ems="10"
+                    android:inputType="number" />
+
+                <EditText
+                    android:id="@+id/editTextTotalPedido"
+                    android:layout_width="81dip"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.45"
+                    android:ems="10"
+                    android:inputType="number" />
+
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1.03"
+                    android:onClick="btn_confirmaVenda"
+                    android:text="Salvar" />
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>

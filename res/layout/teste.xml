@@ -1,0 +1,253 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/scroller"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:fillViewport="true"
+    android:background="@color/cinza" >
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" >
+        
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="25dip"
+            android:background="@android:drawable/bottom_bar"
+            android:gravity="center_vertical" >
+
+            <TextView
+                android:id="@+id/textViewQtItem"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Cliente"
+                android:textColor="@color/preto"
+                android:textSize="16dip" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="@android:drawable/bottom_bar"
+            android:gravity="center_vertical" >
+
+            <ImageButton
+                android:layout_width="80dip"
+                android:layout_height="70dip"
+                android:onClick="btn_buscaCliente"
+                android:src="@drawable/lupa32" />
+
+            <EditText
+                android:id="@+id/editCodRep"
+                android:layout_width="match_parent"
+                android:layout_height="60dip"
+                android:ems="10"
+                android:hint="Informe um cliente :" >
+
+            </EditText>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="25dp"
+            android:background="@android:drawable/bottom_bar"
+            android:gravity="center_vertical" >
+
+            <TextView
+                android:id="@+id/textViewQtItem"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.31"
+                android:text="N° Pedido"
+                android:textColor="@color/preto" />
+
+            <TextView
+                android:id="@+id/textViewQtItem"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.28"
+                android:text="Data da Venda"
+                android:textColor="@color/preto" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="@android:drawable/bottom_bar"
+            android:gravity="center_vertical" >
+
+            <EditText
+                android:id="@+id/editNomeRep"
+                android:layout_width="0dp"
+                android:layout_height="60dip"
+                android:layout_weight="1.0"
+                android:ems="10"
+                android:inputType="number" />
+
+            <EditText
+                android:id="@+id/editCpfRep"
+                android:layout_width="0dp"
+                android:layout_height="60dip"
+                android:layout_weight="1.0"
+                android:ems="10" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="25dp"
+            android:background="@android:drawable/bottom_bar"
+            android:gravity="center_vertical" >
+
+            <TextView
+                android:id="@+id/textViewQtItem"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.31"
+                android:text="Operação"
+                android:textColor="@color/preto" />
+
+            <TextView
+                android:id="@+id/textViewQtItem"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.30"
+                android:text="Pagamento"
+                android:textColor="@color/preto" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="@android:drawable/bottom_bar"
+            android:gravity="center_vertical" >
+
+            <Spinner
+                android:id="@+id/spOperacao"
+                android:layout_width="0dp"
+                android:layout_height="70dip"
+                android:layout_weight="1.0" />
+
+            <Spinner
+                android:id="@+id/spPagamento"
+                android:layout_width="0dp"
+                android:layout_height="70dip"
+                android:layout_weight="1.0" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="25dp"
+            android:background="@android:drawable/bottom_bar"
+            android:gravity="center_vertical" >
+
+            <TextView
+                android:id="@+id/textViewQtItem"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.31"
+                android:text="Prazo"
+                android:textColor="@color/preto" />
+
+            <TextView
+                android:id="@+id/textViewQtItem"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.30"
+                android:text="Filial"
+                android:textColor="@color/preto" />
+
+            <TextView
+                android:id="@+id/textViewQtItem"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.30"
+                android:text="Tabela"
+                android:textColor="@color/preto" />
+        </LinearLayout>
+        
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="@android:drawable/bottom_bar"
+            android:gravity="center_vertical" >
+
+            <Spinner
+                android:id="@+id/spPrazo"
+                android:layout_width="0dp"
+                android:layout_height="70dip"
+                android:layout_weight="1.0" />
+
+            <Spinner
+                android:id="@+id/spEmbalagem"
+                android:layout_width="0dp"
+                android:layout_height="70dip"
+                android:layout_weight="1.0" />
+
+            <Spinner
+                android:id="@+id/spTabela"
+                android:layout_width="0dp"
+                android:layout_height="70dip"
+                android:layout_weight="1.0" />
+        </LinearLayout>
+            <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="25dp"
+            android:background="@android:drawable/bottom_bar"
+            android:gravity="center_vertical" >
+
+            <TextView
+                android:id="@+id/textViewQtItem"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.31"
+                android:text="Observação ..."
+                android:textColor="@color/preto" />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="@android:drawable/bottom_bar"
+            android:gravity="center_vertical" >
+
+            <EditText
+                android:id="@+id/editObser"
+                android:layout_width="wrap_content"
+                android:layout_height="119dp"
+                android:layout_weight="1"
+                android:ems="10"
+                android:hint="Informe tipo de venda Q10, Q40, Q50, Z, cliente não recebe aos sabados, etc.."
+                android:inputType="textMultiLine" >
+
+                <requestFocus />
+            </EditText>
+
+        </LinearLayout>
+       
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="@android:drawable/bottom_bar"
+            android:gravity="center_vertical" >
+
+            <Button
+                android:layout_width="0dip"
+                android:layout_height="80dip"
+                android:layout_weight="1.0"
+                android:text="Cancela" 
+                android:onClick="btnCancela"/>
+
+            <Button
+                android:layout_width="0dip"
+                android:layout_height="80dip"
+                android:layout_weight="1.0"
+                android:onClick="btn_confirma"
+                android:text="Confirma" />
+        </LinearLayout>
+    </LinearLayout>
+
+</ScrollView>
