@@ -2,8 +2,6 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="fill_parent"
     android:layout_height="180dp"
-    android:background="@color/cinza"
-    android:cacheColorHint="@color/cinza"
     android:padding="5dp" >
 
     <ImageView

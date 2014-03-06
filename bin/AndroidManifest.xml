@@ -4,7 +4,7 @@
     android:versionCode="1"
     android:versionName="1.0" >
 
-    <uses-sdk android:minSdkVersion="8" />
+    <uses-sdk android:minSdkVersion="11" />
     
 
     <uses-permission android:name="android.permission.WRITE_OWNER_DATA" />
@@ -28,15 +28,19 @@
     <application
         android:icon="@drawable/vendedor128"
         android:label="@string/app_name" 
+        android:theme="@android:style/Theme.Holo.Light"
         >
 
         <activity
             android:name="com.br.gui.Splash"
-             
+             android:theme="@android:style/Theme.Holo.Light"
             android:label="Força de Vendas"
            >
             <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
+                <action android:name="android.intent.action.MAIN" 
+                 
+                    />
+               
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
@@ -83,6 +87,11 @@
             android:name="com.br.gui.TelaCadastraProduto"
             android:label="Cadastro de  Produtos" >
         </activity>
+            <activity
+            android:name="com.br.kelma.Sistema"
+            android:label="" >
+        </activity>
+        
         <activity
             android:name="com.br.gui.TelaPedidos"
             android:label="Pedidos"
@@ -118,7 +127,7 @@
             android:label="Clientes" >
         </activity>
           <activity
-            android:name="com.br.gui.TelaClientes2"
+            android:name="com.br.gui.TelaConsultaClientes"
             android:label="Clientes" >
         </activity>
         <activity

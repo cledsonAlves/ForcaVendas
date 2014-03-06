@@ -6,14 +6,13 @@ import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.text.InputFilter;
-import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
-import com.br.kelma.Menu;
 import com.br.kelma.R;
+import com.br.kelma.Sistema;
 import com.br.logica.Logica;
 
 public class Autentica extends Activity {
@@ -78,7 +77,7 @@ public class Autentica extends Activity {
 			editor.commit();
 			
 			
-		     startActivity(new Intent(Autentica.this,Menu.class));
+		     startActivity(new Intent(Autentica.this,Sistema.class));
 		     this.finish();
 		//	}else {
 				// Toast.makeText(this,"Usuário ou Senha inválida!",Toast.LENGTH_SHORT).show();

@@ -26,10 +26,10 @@ public class TelaAtualizaEstoque extends Activity {
 	ManipulaBanco mb;
 	private Logica logica = new Logica();
 	private int count = 0, count2 = 0;
-     ProgressDialog dialog;
+	ProgressDialog dialog;
 	TextView txtClientes, txtAtualizados;
 	ProgressBar progressBar;
-	AtualizaClientes atualiza = new AtualizaClientes();
+	AtualizaClientes atualiza;
 	private ArrayList<ClienteJson> lista;
 	private int progresso;
 	private Handler handler = new Handler();
@@ -48,41 +48,50 @@ public class TelaAtualizaEstoque extends Activity {
 		txtAtualizados.setText("Total de clientes atualizados : " + count2);
 		progressBar = (ProgressBar) findViewById(R.id.progressBar1);
 
+		String[] vetor = logica.buscaServidor(getApplicationContext());
+		String ip = vetor[0];
+		String usuario = vetor[1];
+		String senha = vetor[2];
+		String diretorio = vetor[3];
+
+		atualiza = new AtualizaClientes(ip, usuario, senha, diretorio);
+
 	}
 
 	public void btn_baixar(View v) {
 		txtClientes.setText("Total de clientes baixados : " + 0);
-		txtAtualizados.setText("Total de clientes atualizados : " + 0);	
-		
-		final ProgressDialog dialog = new ProgressDialog(TelaAtualizaEstoque.this);
+		txtAtualizados.setText("Total de clientes atualizados : " + 0);
+
+		// Toast.makeText(this,"IP: " + diretorio,Toast.LENGTH_LONG).show();
+
+		final ProgressDialog dialog = new ProgressDialog(
+				TelaAtualizaEstoque.this);
 		dialog.setCancelable(true);
 		dialog.setMessage("Buscando clientes no servidor , aguarde ...");
 		dialog.show();
 		new Thread() {
-			public void run() {	
-		   // baixa os clientes do ftp
-			 baixou =  atualiza.enviaPedido(getApplicationContext());
+			public void run() {
+				// baixa os clientes do ftp
+				baixou = atualiza.baixaClientes(getApplicationContext());
 				handler.post(new Runnable() {
 					public void run() {
-					  if (baixou){
-						  dialog.dismiss();
-						lista = atualiza.buscaClientes(getApplicationContext());
-						if (lista.size()> 0){
-						txtClientes.setText("Total de clientes baixados : " + lista.size());
-						txtAtualizados.setText("Total de clientes atualizados : " + count);	
-							new TarefaWS().execute();	
+						if (baixou) {
+							dialog.dismiss();
+							lista = atualiza
+									.buscaClientes(getApplicationContext());
+							if (lista.size() > 0) {
+								txtClientes.setText("Total de clientes baixados : "+ lista.size());
+								txtAtualizados.setText("Total de clientes atualizados : "+ count);
+								new TarefaWS().execute();
+							}
+						} else {
+							dialog.dismiss();
+							Toast.makeText(getApplicationContext(),"não foi possível conectar ao servidor, verifique suas conexões de Internet",Toast.LENGTH_LONG).show();
 						}
-					  }else{
-						  dialog.dismiss();
-						  Toast.makeText(getApplicationContext(), "não foi possível conectar ao servidor" +
-						  		", verifique suas conexões de Internet",Toast.LENGTH_LONG).show();
-					  }
 					}
 				});
 			}
 		}.start();
-		
-		
 
 	}
 
@@ -96,9 +105,6 @@ public class TelaAtualizaEstoque extends Activity {
 			dialog.setCancelable(true);
 			dialog.setMessage("Atualizando Base de dados de clientes ...");
 			dialog.setMax(lista.size());
-
-			// define o estilo como horizontal que nesse caso signifca que terá
-			// barra de progressão/contagem
 			dialog.setProgressStyle(ProgressDialog.STYLE_HORIZONTAL);
 			dialog.show();
 
@@ -108,23 +114,23 @@ public class TelaAtualizaEstoque extends Activity {
 		protected String doInBackground(Void... params) {
 			try {
 				while (dialog.getProgress() < dialog.getMax()) {
-					// esse é apenas um método de teste que pode ser
-					// demorado
-					if (logica.cadastraClienteJson(lista.get(dialog.getProgress()),
+					if (logica.cadastraClienteJson(
+							lista.get(dialog.getProgress()),
 							getApplicationContext())) {
 						count++;
 					}
 					dialog.incrementProgressBy(1);
 					progresso = dialog.getProgress();
-					//setProgress(progresso);		
-					
+					// setProgress(progresso);
+
 				}
 			} catch (Exception e) {
 				Log.e("tag", e.getMessage());
 			} catch (Throwable e) {
-			Toast.makeText(getApplicationContext(), "Erro ao finalizar", Toast.LENGTH_SHORT).show();
+				Toast.makeText(getApplicationContext(), "Erro ao finalizar",
+						Toast.LENGTH_SHORT).show();
 				e.printStackTrace();
-			}			
+			}
 			count2 = lista.size();
 			return "";
 		}
@@ -133,13 +139,11 @@ public class TelaAtualizaEstoque extends Activity {
 		protected void onPostExecute(String result) {
 			super.onPostExecute(result);
 			txtClientes.setText("Total de clientes baixados : " + count2);
-			txtAtualizados.setText("Total de clientes atualizados : " + count);			
+			txtAtualizados.setText("Total de clientes atualizados : " + count);
 			dialog.dismiss();
 
 		}
 
 	}
-	public void atualiza(){
-		Log.i("atualiza", "teste");
-	}
+
 }

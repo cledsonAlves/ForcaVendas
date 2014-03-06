@@ -460,6 +460,6 @@ public class ExecutaScript {
 				
 
 		// Insere configuraçoes iniciais
-		"INSERT INTO FV_CONFIGURA(representante,senha,ipFTP,UserFTP,SenhaFTP,dirFTP,dirFotoProdutos,dirFotoExtra) values ('1','vendas','lojakelma.com.br','site1368285974','kelma@12','/Pedidos/Mauricio','/storage/extSdCard/fotoProdutos/','/storage/extSdCard/fotoExtra/');"};
+		"INSERT INTO FV_CONFIGURA(representante,senha,ipFTP,UserFTP,SenhaFTP,dirFTP,dirFotoProdutos,dirFotoExtra) values ('1','vendas','lojakelma.com.br','site1368285974','kelma@12','/Pedidos/Eduardo','/storage/extSdCard/fotoProdutos/','/storage/extSdCard/fotoExtra/');"};
 	}
 }

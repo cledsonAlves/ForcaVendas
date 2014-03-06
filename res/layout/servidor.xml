@@ -4,28 +4,12 @@
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
     android:fillViewport="true" 
-    android:background="@color/cinza">
+   >
 
     <LinearLayout
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical" >
-
-        <TextView
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
-            android:paddingLeft="6dip"
-            android:paddingRight="6dip"
-            android:paddingTop="6dip"
-            android:text="Servidor de Pedidos"
-            android:textAppearance="?android:attr/textAppearanceMedium"
-            android:textColor="@color/preto" />
-
-        <ImageView
-            android:id="@+id/imageView"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:src="@drawable/trasmite64" />
 
         <View
             android:layout_width="fill_parent"
@@ -47,7 +31,6 @@
         <LinearLayout
             android:layout_width="fill_parent"
             android:layout_height="16dp"
-            android:background="@android:drawable/bottom_bar"
             android:gravity="center_vertical" >
 
             <TextView
@@ -62,7 +45,6 @@
         <LinearLayout
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
-            android:background="@android:drawable/bottom_bar"
             android:gravity="center_vertical" >
 
             <EditText
@@ -76,7 +58,6 @@
         <LinearLayout
             android:layout_width="fill_parent"
             android:layout_height="16dp"
-            android:background="@android:drawable/bottom_bar"
             android:gravity="center_vertical" >
 
             <TextView
@@ -92,7 +73,6 @@
         <LinearLayout
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
-            android:background="@android:drawable/bottom_bar"
             android:gravity="center_vertical" >
 
             <EditText
@@ -106,7 +86,6 @@
         <LinearLayout
             android:layout_width="fill_parent"
             android:layout_height="16dp"
-            android:background="@android:drawable/bottom_bar"
             android:gravity="center_vertical" >
 
             <TextView
@@ -122,7 +101,6 @@
         <LinearLayout
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
-            android:background="@android:drawable/bottom_bar"
             android:gravity="center_vertical" >
 
             <EditText
@@ -137,7 +115,6 @@
         <LinearLayout
             android:layout_width="fill_parent"
             android:layout_height="16dp"
-            android:background="@android:drawable/bottom_bar"
             android:gravity="center_vertical" >
 
             <TextView
@@ -153,7 +130,6 @@
         <LinearLayout
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
-            android:background="@android:drawable/bottom_bar"
             android:gravity="center_vertical" >
 
             <EditText
@@ -171,14 +147,12 @@
         <LinearLayout
             android:layout_width="fill_parent"
             android:layout_height="16dp"
-            android:background="@android:drawable/bottom_bar"
             android:gravity="center_vertical" >
         </LinearLayout>
 
         <LinearLayout
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
-            android:background="@android:drawable/bottom_bar"
             android:gravity="center|center_vertical" >
 
             <Button

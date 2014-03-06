@@ -4,7 +4,7 @@
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
     android:fillViewport="true"
-    android:background="@color/cinza" >
+>
 
     <LinearLayout
         android:layout_width="fill_parent"
@@ -15,7 +15,6 @@
         <LinearLayout
             android:layout_width="fill_parent"
             android:layout_height="25dip"
-            android:background="@android:drawable/bottom_bar"
             android:gravity="center_vertical" >
 
             <TextView
@@ -31,7 +30,6 @@
         <LinearLayout
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
-            android:background="@android:drawable/bottom_bar"
             android:gravity="center_vertical" >
 
             <ImageButton
@@ -53,7 +51,6 @@
         <LinearLayout
             android:layout_width="fill_parent"
             android:layout_height="25dp"
-            android:background="@android:drawable/bottom_bar"
             android:gravity="center_vertical" >
 
             <TextView
@@ -76,7 +73,6 @@
         <LinearLayout
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
-            android:background="@android:drawable/bottom_bar"
             android:gravity="center_vertical" >
 
             <EditText
@@ -98,7 +94,6 @@
         <LinearLayout
             android:layout_width="fill_parent"
             android:layout_height="25dp"
-            android:background="@android:drawable/bottom_bar"
             android:gravity="center_vertical" >
 
             <TextView
@@ -121,7 +116,6 @@
         <LinearLayout
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
-            android:background="@android:drawable/bottom_bar"
             android:gravity="center_vertical" >
 
             <Spinner
@@ -140,7 +134,6 @@
         <LinearLayout
             android:layout_width="fill_parent"
             android:layout_height="25dp"
-            android:background="@android:drawable/bottom_bar"
             android:gravity="center_vertical" >
 
             <TextView
@@ -172,7 +165,6 @@
         <LinearLayout
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
-            android:background="@android:drawable/bottom_bar"
             android:gravity="center_vertical" >
 
             <Spinner
@@ -196,7 +188,6 @@
             <LinearLayout
             android:layout_width="fill_parent"
             android:layout_height="25dp"
-            android:background="@android:drawable/bottom_bar"
             android:gravity="center_vertical" >
 
             <TextView
@@ -210,7 +201,6 @@
         <LinearLayout
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
-            android:background="@android:drawable/bottom_bar"
             android:gravity="center_vertical" >
 
             <EditText
@@ -231,7 +221,7 @@
         <LinearLayout
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
-            android:background="@android:drawable/bottom_bar"
+
             android:gravity="center_vertical" >
 
             <Button

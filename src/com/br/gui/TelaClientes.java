@@ -15,9 +15,11 @@ import android.view.WindowManager;
 import android.view.inputmethod.InputMethodManager;
 import android.widget.AdapterView;
 import android.widget.AdapterView.OnItemClickListener;
+import android.widget.AdapterView.OnItemLongClickListener;
 import android.widget.EditText;
 import android.widget.ListView;
 import android.widget.RatingBar;
+import android.widget.Toast;
 
 import com.br.adaptadores.AdaptadorCliente;
 import com.br.adaptadores.AdaptadorProduto;
@@ -28,8 +30,7 @@ import com.br.objetos.Cliente;
 import com.br.objetos.Produto;
 
 public class TelaClientes extends Activity {
-	private ArrayList<Cliente> listaClientes;
-	private List<Cliente> listaProdutos;
+	private List<Cliente> listaClientes;
 	 EditText etPesquisa;
 	 public static String filtro_cliente = "";
 	 AdaptadorCliente adapter;
@@ -37,20 +38,16 @@ public class TelaClientes extends Activity {
 	
 	ListView listaItens; 
 	private ArrayList<Cliente> novaLista = new ArrayList<Cliente>();
-	//listViewClientes
-	
-	
+
 	
 	//  construtor 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
-		
-		
-		
+			
 		ManipulaBanco mb = new ManipulaBanco(this);
-		listaProdutos = new ArrayList<Cliente>();
-		listaProdutos = mb.buscaCliente();
+		listaClientes = new ArrayList<Cliente>();
+		listaClientes = mb.buscaCliente();
 
 		setContentView(R.layout.consulta_cliente);
 		 listaItens = (ListView) findViewById(R.id.listViewClientes);
@@ -62,7 +59,7 @@ public class TelaClientes extends Activity {
 		 etPesquisa.selectAll();
 		 etPesquisa.setFilters(new InputFilter[]{new InputFilter.AllCaps()});
 		 
-		 adapter = new AdaptadorCliente(this, listaProdutos);
+		 adapter = new AdaptadorCliente(this, listaClientes);
 
 		
 		//  adaptador da lista customizado
@@ -89,14 +86,7 @@ public class TelaClientes extends Activity {
 				if (novaLista.size() > 0) {
 					Cliente c = novaLista.get(position);
 					String nome = c.getNome();  
-					/**
-					 * 	      Cliente cliente = listaClientes.get(position);
-	      String nome = cliente.getNome();
-	      Intent it = new Intent();   
-	      it.putExtra("id",nome);  
-	      setResult(2,it);
-	          finish(); 
-					 */
+		
 
 					Intent it = new Intent();
 					it.putExtra("id",nome);
@@ -105,7 +95,7 @@ public class TelaClientes extends Activity {
 
 					// senão, pega na lista normal
 				} else {
-					Cliente c = listaProdutos.get(position);
+					Cliente c = listaClientes.get(position);
 					String nome = c.getNome();
 
 					Intent it = new Intent();
@@ -117,8 +107,24 @@ public class TelaClientes extends Activity {
 
 			}
 		});
+		
+		
+		listaItens.setOnItemLongClickListener(new OnItemLongClickListener() {
+			public boolean onItemLongClick(AdapterView<?> arg0, View arg1,
+					int arg2, long arg3) {
+				
+				Toast.makeText(getApplicationContext(),"Ok",Toast.LENGTH_LONG).show();
+
+				return false;
+			}
+			
+		});
+			
+		
 
 	}
+	
+	
 
 	private TextWatcher filterTextWatcher = new TextWatcher() {
 
@@ -149,13 +155,13 @@ public class TelaClientes extends Activity {
 		String pesquisa = etPesquisa.getText().toString();
 		
 			
-		for (int i = 0; i < listaProdutos.size(); i++) {
-			if (listaProdutos.get(i).getNome().contains(pesquisa)) {
-				novaLista.add(listaProdutos.get(i));
+		for (int i = 0; i < listaClientes.size(); i++) {
+			if (listaClientes.get(i).getNome().contains(pesquisa)) {
+				novaLista.add(listaClientes.get(i));
 
-			} else if (String.valueOf(listaProdutos.get(i).getCodigo())
+			} else if (String.valueOf(listaClientes.get(i).getCodigo())
 					.contains(etPesquisa.getText().toString())) {
-				novaLista.add(listaProdutos.get(i));
+				novaLista.add(listaClientes.get(i));
 
 			} 
 

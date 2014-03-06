@@ -14,12 +14,36 @@
      limitations under the License.
 -->
 
-<menu xmlns:android="http://schemas.android.com/apk/res/android">
+<menu xmlns:android="http://schemas.android.com/apk/res/android" >
+    <item android:id="@+id/item1" android:title="Cadastro">
+        <menu>
+            <item android:id="@+id/cad_cliente" android:title="Cadastrar Cliente"/>
+            <item android:id="@+id/cad_produto" android:title="Cadastrar Produto"/>
+            
+            
+        </menu>
 
-	<!-- custom -->
-	<item android:id="@+id/menu_search" android:showAsAction="ifRoom"
-		android:title="string/action_label_search" android:actionViewClass="android.widget.SearchView" />
+    
+    </item>
+    
+  <item android:id="@+id/item2" android:title="Atualização">
+        <menu>
+            <item android:id="@+id/at_clientes" android:title="Atualizar Clientes"/>
+            <item android:id="@+id/at_produtos" android:title="Atualizar  Produtos"/>
+            <item android:id="@+id/at_sistema" android:title="Atualizar  Sistema"/>
+
+        </menu>
 
 
-
+  
+</item>
+  <item android:id="@+id/item3" android:title="Configurações">
+        <menu>
+            <item android:id="@+id/servidor" android:title="Servidor de Pedidos"/>
+            <item android:id="@+id/fotos" android:title="Fotos Produtos"/>
+          </menu>
+    </item>
+      <item android:id="@+id/item4" android:title="Sobre">
+    
+    </item>
 </menu>

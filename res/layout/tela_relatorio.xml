@@ -3,14 +3,12 @@
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
     android:orientation="vertical" 
-     android:background="@color/cinza"
     android:cacheColorHint="@color/cinza">
 
     <TextView
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:text="Relatório de Vendas "
-        android:textColor="@color/branco"
         android:textSize="28dip" />
 
     <ExpandableListView

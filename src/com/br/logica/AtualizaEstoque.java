@@ -41,7 +41,6 @@ public class AtualizaEstoque {
 		this.usuario = usuario;
 		this.senha = senha;
 		this.diretorio = diretorio;
-		
 		atualiza();
 	}
 
@@ -50,17 +49,14 @@ public class AtualizaEstoque {
 	// faz o download da atualização  no site via ftp
 	public boolean download() {
 		FTPClient ftp = new FTPClient();
-
 		try {
 			ftp.connect(ip);
 			if (FTPReply.isPositiveCompletion(ftp.getReplyCode())) {
-
 				ftp.login(usuario, senha);
 				ftp.enterLocalPassiveMode();
 				ftp.changeWorkingDirectory(diretorio);
 			}
 			if (ftp.isConnected()) {
-
 				// Cria arquivo para gravar a atualição na pasta Files
 				// referencia para pegar o caminho file
 				File file = ctx.getFileStreamPath("estoque.xml");

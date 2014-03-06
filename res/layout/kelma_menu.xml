@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/scroller"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:fillViewport="true"
+    android:background="@color/azulceleste" >
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" >
+
+        <TextView
+            android:id="@+id/editVersao"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:paddingLeft="6dip"
+            android:paddingRight="6dip"
+            android:paddingTop="6dip"
+            android:text="Versão 1.4"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textColor="@color/azul" />
+
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="1dip"
+            android:layout_marginBottom="12dip"
+            android:layout_marginLeft="6dip"
+            android:layout_marginRight="6dip"
+            android:layout_marginTop="6dip"
+            android:background="@color/rosa" />
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:src="@drawable/logokelma" />
+
+        <ImageView
+            android:id="@+id/ImageViewSlide"
+            android:layout_width="fill_parent"
+            android:layout_height="256dip"
+            android:layout_weight="1.0"
+            android:paddingBottom="6dip"
+            android:paddingLeft="6dip"
+            android:paddingRight="6dip"
+            android:src="@drawable/reprentante1" />
+        
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center|center_vertical" >
+
+            <ImageView
+                android:id="@+id/imageView1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dip"
+                android:src="@drawable/rest" />
+
+            <TextView
+                android:id="@+id/textRepresentante"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dip"
+                android:layout_weight="0.17"
+                android:text="Cledson Alves"
+                android:textAppearance="?android:attr/textAppearanceMedium" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</ScrollView>

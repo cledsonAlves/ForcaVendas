@@ -22,17 +22,12 @@ import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
 
 public class AtualizaClientes {
-	String ip = "lojakelma.com.br";
-	String usuario ;
-	String senha ;
-	String diretorio = "/Pedidos/";
-	String destino = "C:/Users/Cledson/Desktop/Comunicador/Pedidos/";
-	FTPClient ftp;
-	private Handler handler = new Handler();
-	ProgressDialog dialogs ;
-	
-	
-	
+	private final String ip ;
+	private final String usuario ;
+	private final String senha ;
+	private String diretorio;
+
+
 	//  construtor
 	public  AtualizaClientes(String ip, String usuario, String senha, String diretorio){
 		this.ip = ip;
@@ -41,9 +36,7 @@ public class AtualizaClientes {
 		this.diretorio = diretorio;
 		
 	}
-	
 
-	
 	//  Método faz a leitura do arquivo json ( Clientes)
 	public ArrayList<ClienteJson> buscaClientes(Context ctx) {
 		File file = ctx.getFilesDir();
@@ -58,7 +51,7 @@ public class AtualizaClientes {
 
 			String s = new String(buffer);
             
-			// após a leitura , guarda monta a lista de objetos clientes 
+			// após a leitura ,  monta a lista de objetos clientes 
 			ArrayList<ClienteJson> lista = new Gson().fromJson(s, new TypeToken<ArrayList<ClienteJson>>() {}.getType());
 			
 			if (textfile.exists()){
@@ -66,12 +59,9 @@ public class AtualizaClientes {
 				boolean deleta = textfile.delete();	
 				Log.i("Arquivo deletado", "deletou = " + deleta );
 			}
-
 			return lista;
-			
-
-		} catch (FileNotFoundException e) {
-			// TODO Auto-generated catch block
+		
+		} catch (FileNotFoundException e) {		// TODO Auto-generated catch block
 			e.printStackTrace();
 		} catch (IOException e) {
 			// TODO Auto-generated catch block
@@ -82,12 +72,8 @@ public class AtualizaClientes {
 	}
 
 	// Método carrega clientes do ftp ...
-	public boolean enviaPedido(final Context ctx) {
-		
-		
-		
+	public boolean baixaClientes(final Context ctx) {
 		FTPClient ftp = new FTPClient();
-
 		try {
 			ftp.connect(ip);
 			if (FTPReply.isPositiveCompletion(ftp.getReplyCode())) {
@@ -106,8 +92,6 @@ public class AtualizaClientes {
 
 				ftp.logout();
 				ftp.disconnect();
-				Log.i("Executar = ", "Executei");
-				// envia o e-mail do pedido...
 				return true;
 			} else {
 				return false;

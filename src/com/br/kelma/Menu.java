@@ -31,18 +31,15 @@ import com.br.baseDados.CriaTabelas;
 import com.br.baseDados.ManipulaBanco;
 import com.br.gui.Autentica;
 import com.br.gui.TelaAtualizaEstoque;
-import com.br.gui.TelaCadastraFornecedor;
 import com.br.gui.TelaCadastraProduto;
-import com.br.gui.TelaCadastraRepresentante;
 import com.br.gui.TelaCadastroCliente;
-import com.br.gui.TelaClientes;
-import com.br.gui.TelaClientes2;
+import com.br.gui.TelaConsultaClientes;
 import com.br.gui.TelaConfigura;
-import com.br.gui.TelaRelatorios;
 import com.br.gui.TelaParametrosPedido;
 import com.br.gui.TelaPedido;
 import com.br.gui.TelaProdutos;
 import com.br.gui.TelaProdutos2;
+import com.br.gui.TelaRelatorios;
 import com.br.gui.TelaVenda;
 import com.br.gui.TelaVendedores;
 import com.br.logica.Logica;
@@ -96,10 +93,6 @@ public class Menu extends Activity implements OnClickListener {
 	    	//  carrega em memoria todos os produtos ...
 	    	ManipulaBanco mb = new ManipulaBanco(this);
 			produtos = mb.buscaProduto();
-			
-
-			
-	  
 
 	}
 
@@ -157,7 +150,7 @@ public class Menu extends Activity implements OnClickListener {
 
 	// Clientes e Produtos
 	public void btn_Consulta(View v) {
-		startActivity(new Intent(this, TelaClientes2.class));
+		startActivity(new Intent(this, TelaConsultaClientes.class));
 	}
 
 	// Pedidos
@@ -189,14 +182,6 @@ public class Menu extends Activity implements OnClickListener {
 	    //  cadastra produto
 		case produto:
 			startActivity(new Intent(this, TelaCadastraProduto.class));
-			return true;
-		// cadastra fornecedor ... 	
-		case fornecedor:
-			startActivity(new Intent(this, TelaCadastraFornecedor.class));
-			return true;
-		// cadastra representante ..	
-		case cad_representante:
-			startActivity(new Intent(this, TelaCadastraRepresentante.class));
 			return true;	
 		//  consulta clientes ...	
 		case conCli:

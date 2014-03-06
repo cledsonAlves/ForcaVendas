@@ -1,7 +1,6 @@
 package com.br.adaptadores;
 
 import java.util.ArrayList;
-import java.util.List;
 
 import android.content.Context;
 import android.graphics.Color;
@@ -9,11 +8,9 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
-import android.widget.CheckBox;
 import android.widget.TextView;
 
 import com.br.gui.ItemListView;
-import com.br.gui.TelaVenda2;
 import com.br.kelma.R;
 import com.br.logica.Logica;
 import com.br.objetos.Pedido;

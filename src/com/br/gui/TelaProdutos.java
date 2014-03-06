@@ -61,8 +61,6 @@ public class TelaProdutos extends Activity  implements OnItemLongClickListener{
 	ProgressDialog dialog ;
 
 	private ArrayAdapter<String> adaptador1;
-	
-
 	private double preco [];
 	
 
