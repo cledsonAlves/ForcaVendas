@@ -1,7 +1,6 @@
 package com.br.kelma;
 import java.io.File;
 import java.io.IOException;
-import java.net.MalformedURLException;
 import java.net.SocketException;
 import java.util.ArrayList;
 
@@ -15,9 +14,8 @@ import android.content.Intent;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.os.Bundle;
-import android.os.Environment;
+import android.os.Handler;
 import android.os.SystemClock;
-import android.util.Log;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.Window;
@@ -28,6 +26,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.ListView;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.br.baseDados.CriaTabelas;
@@ -44,13 +43,18 @@ import com.br.gui.TelaVenda;
 import com.br.logica.Logica;
 import com.br.objetos.Produto;
 
-public class Sistema extends Activity {
+public class Sistema extends Activity  implements Runnable{
 	private  ListView listMenu;
 	private ArrayAdapter<String> adapter;
 	public static ArrayList<Produto> produtos;
 	private boolean visible = true;
 	private Logica logica = new Logica();
 	private int progresso;
+	private String[] nomes;
+	private ImageView img;
+	private int count;
+	private boolean on = true;
+	private Handler handle;
 
 	@SuppressLint("ResourceAsColor")
 	@Override
@@ -59,22 +63,17 @@ public class Sistema extends Activity {
 		setContentView(R.layout.menu);
 
 		listMenu = (ListView) findViewById(R.id.listViewMenu);
+	    
 		
-		ImageView img = (ImageView) findViewById(R.id.ImageViewSlide);
-		img.setBackgroundColor(R.color.white);
-		
-
-		//carrega a foto do produto do cartão de memoria
-		Bitmap bmp = BitmapFactory.decodeFile("/sdcard/fotoExtra/100102.jpg");
-		//Bitmap bmp2 = BitmapFactory.decodeFile("/sdcard/fotoProdutos/default.png");
-	
-		  img.setImageBitmap(bmp);
-		
+		img = (ImageView) findViewById(R.id.ImageViewSlide);
 		new CriaTabelas(this);
     	
     	//  carrega em memoria todos os produtos ...
     	ManipulaBanco mb = new ManipulaBanco(this);
 		produtos = mb.buscaProduto();
+		
+		// inicia transição de imagens
+		initSlides();
 		
 
 		// opções do menu
@@ -114,7 +113,7 @@ public class Sistema extends Activity {
 				case 4:
 					TelaProdutos.listaProdutos =  produtos;
 					startActivity(new Intent(getApplicationContext(),
-							TelaProdutos.class));
+							 Galeria.class));
 					break;
 
 				// relatorios
@@ -316,6 +315,42 @@ public class Sistema extends Activity {
 			});
 		}
 	};
+	
+	public void initSlides(){
+		handle = new Handler();
+    	handle.post(this);
+		
+		 File sdcard = new File("/sdcard/fotoExtra");
+	        if (sdcard.exists()){
+	        	File[] files = sdcard.listFiles();
+	        	nomes = new String[files.length];
+	        	for (int i = 0; i < files.length; i++) {
+					nomes[i] =files[i].getName();
+					
+				}
+	        
+	        }
+		
+	}
+
+	public void run() {
+
+		if (on) {
+			count++;
+			int max = nomes.length;
+			if (count == max) {
+				count = 0;
+			}
+			TextView teste = (TextView) findViewById(R.id.textView1);
+			teste.setText("count = " + count);
+			// carrega a foto do produto do cartão de memoria
+			Bitmap bmp = BitmapFactory.decodeFile("/sdcard/fotoExtra/"
+					+ nomes[count]);
+			img.setImageBitmap(bmp);
+			handle.postDelayed(this, 1000);
+		}
+
+	}
 
 
 }

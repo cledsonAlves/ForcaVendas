@@ -109,6 +109,11 @@
             android:name="com.br.gui.TelaCadastroCliente"
             android:label="Cadastro de clientes" >
         </activity>
+        
+          <activity
+            android:name="com.br.kelma.Galeria"
+            android:label="Imagens" >
+        </activity>
         <activity
             android:name="com.br.gui.TelaAgendaVisita"
             android:label="Agendar visita"
